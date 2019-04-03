@@ -24,20 +24,23 @@ body{
 
 button{
     font-size: 20px; 
+    color:rgb(116, 33, 199)
+    
+
 
 }
 
 h2{
     background-color:
     font-size: 20px; 
-    font-style: Broadway 
+    
 }
 
 h3{
    
     background-color:
     font-size: 20px; 
-    font-style:Broadway
+    
 }
 
 .main-holder {
@@ -58,17 +61,22 @@ button{
     }
     
 select{
-    background-color:rgba(255, 255, 255, 0.87);
+    
+    background-color:rgba(255, 255, 255, 0.397);
     /*definimos a largura do box*/
-    widows: 8px;0px;
+    widows: 20px;2px;
     /* definimos a altura do box */
-    height:28px;
+    height:38px;
     /* definimos a cor de fundo do box */
     
     /* definimos o quão arredondado irá ficar nosso box */
-    border-radius: 26px;
-    }
+    border-radius: 30px;
+    
+    font-size: 20px; 
+    color:rgb(116, 33, 199)
+    
 
+}
    /* centralizar*/
 
   
