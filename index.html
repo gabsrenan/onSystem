@@ -1,7 +1,7 @@
 <html>
 
 <head>
-	<script src="index.js"></script>
+	<script src="function.js"></script>
 	<meta charset="utf-8">
 	<title>Estatistica</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -17,7 +17,7 @@
 		<div id="ed">
 			<h2>Estatistica Descritiva</h2>
 			<hr/>
-			<form>
+			<form name="calcform" method="post" action="">
 				<div>
 					<div>
 						<p>
@@ -210,13 +210,18 @@
 				<br />
 				<div>
 					<p>Insira os dados </p><input id="coleta" type="text" class="validate" placeholder="Ex: 1;2;3;4;5">
-
 				</div>
+				<div>
+					<label for="res">Resultado:</label>
+     				 <input type="text" name="res" id="res" />
+				</div>
+
 		</div>
 
 
 		<div>
-			<p><a id="startgg" href="#saidagg" onclick="entrada()" class="btn btn-primary btn-sm ">Calcular</a></p>
+			<p><a id="startgg" href="#saidagg" onclick="dpeTotal(10,20)" class="btn btn-primary btn-sm ">Calcular</a></p>
+		
 		</div>
 		</form>
 		<hr/>
