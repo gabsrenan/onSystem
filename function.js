@@ -1,5 +1,5 @@
 
-function dpeTotal(quantidade) { alert("oi");
+function dpeTotal(quantidade) { 
     var vetTotal = new Array();
     
     for (var i = 0; i < quantidade; i++) {
@@ -9,7 +9,7 @@ function dpeTotal(quantidade) { alert("oi");
         return a - b;
 
     });
-    document.calcform.getElementById("res").innerHTML = 'e nois';
+
 }
 
 
