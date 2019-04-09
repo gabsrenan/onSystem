@@ -322,6 +322,7 @@ function setValoresExtrato() {
     v_valoresExtrato = v_valoresExtrato_str.split(";").map(function(t) {
         return parseFloat(t)
     });
-} 
+}
     }
-    
+}
+
