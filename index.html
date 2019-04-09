@@ -13,86 +13,8 @@
 
 <body>
     <div class="main-holder">
-    <p>
-        <h1 align="center" class="text-success"> ON System</h1>
-
-    </p>
-    <p>
-        <li><button type="button" class="btn btn-primary" id="btnD2">Discritiva</button></li>
-        <li><button type="button" class="btn btn-primary" onclick="montaValoresD()">Probabilidade</button></li>
-        <li><button type="button" class="btn btn-primary" onclick="montaModaD()">Corelação Regressão</button></li>
-    </p><hr>
-    <p>
-        <h2 align="lift">Tipo de Variável</h2>
-    </p>
-
-    <p>
-        <select id="tipoVariavel">
-            <option value="QLordinal">Qualitativa Ordinal</option>
-            <option value="QLnominal">Qualitativa Nominal</option>
-            <option value="QNdiscreta">Quantitaviva Discreta</option>
-            <option value="QNcontinua">Quantitaviva Continua</option>
-        </select>
-    </p>
-
-    <p>
-        <h3 align="lift">Ordenação das variáveis ordinais</h3><hr>
-        <p id="aviso"></p>
-    </p>
-
-    <p>
-        <h3 align="lift">Processo Estatístico</h3>
-    </p>
-
-    <p>
-        <select id="tipoVariavel">
-            <option value="QLordinal">Censo (População)</option>
-            <option value="QLnominal">Amostra (Estimação)</option>
-        </select>
-    </p>
-
-    <p>
-        <label>Nome da Variável</label>
-        <input type="text" class="form-control" id="Nome da Variável" aria-describedby="basic-addon1"
-            onblur="setPopulacao()" onkeyup="validaEntrada(this)">
-    </p>
-
-    <p>
-        <label>Nome da Frequência</label>
-        <input type="text" class="form-control" id="Frequencia" aria-describedby="basic-addon1" onblur="setPopulacao()"
-            onkeyup="validaEntrada(this)">
-    </p><hr>
-
-    <p>
-        <h3 aling="lift">Medida Separatriz</h3>
-    </p>
-    <p>
-        <select id="tipoVariavel">
-            <option value="QLordinal">Quartil</option>
-            <option value="QLnominal">Quintil</option>
-            <option value="QNdiscreta">Decil</option>
-            <option value="QNcontinua">Porcentil</option>
-        </select>
-    </p>
-    <p>
-        <label>Valor</label>
-        <input type="text" class="form-control" id="valor" aria-describedby="basic-addon1" onblur="setPopulacao()"
-            onkeyup="validaEntrada(this)">
-    </p>
-    <p>
-        <label>Entrada de dados</label>
-        <input type="text" class="form-control" id="Entrada de dados" aria-describedby="basic-addon1"
-            onblur="setPopulacao()" onkeyup="validaEntrada(this)">
-    </p><hr>
-    <button class="btn" type="submit" onclick="entrada()">Calcular</button>
-    <div id="resultados">
-        <p id="saida1"></p>
-        <p id="saida2"></p>
-
-    </div>
-	<div class="container">
-		<p>
-			<h1 align="center"> ON System</h1>
+   
+			<h1 align="center"> ON System</h1> 
 		</p>
 		<div id="ed">
 			<h2>Estatistica Descritiva</h2>
