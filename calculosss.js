@@ -1,7 +1,6 @@
-
 function dpeTotal(quantidade) { 
     var vetTotal = new Array();
-    
+
     for (var i = 0; i < quantidade; i++) {
         vetTotal.push(i);
     }
@@ -69,21 +68,21 @@ function propExtratos(vetExtratos, populacao) {
 
     //
     function tabelaQuantDiscreta(dados) {
-  
+
     var tabela = new Array();
 
-    
+
     for (var i = 0; i < dados.length; i++) {
         var achou = false;
         for (var j = 0; j < tabela.length; j++) {
-            
+
             if (dados[i] == tabela[j][0]) {
                 tabela[j][1] += 1;
                 achou = true;
                 continue;
             }
         }
-        
+
         if (achou == false) {
             tabela.push([dados[i], 1]);
         }
@@ -128,7 +127,7 @@ function tabelaQuantContinua(dados) {
             }
         }
     }
-   
+
     var tabela = new Array();
 
     /*monta a tabela*/
@@ -203,7 +202,7 @@ function mediaVarContinua(tabela, populacao) {
 
 //
 function modaConvVarCont(tabela) {
-    
+
     var moda = new Array();
     /*insere a primeira posição como moda*/
     moda.push([tabela[0][0], tabela[0][4], tabela[0][8]]);
@@ -323,4 +322,6 @@ function setValoresExtrato() {
     v_valoresExtrato = v_valoresExtrato_str.split(";").map(function(t) {
         return parseFloat(t)
     });
-}
+} 
+    }
+    
