@@ -1,9 +1,7 @@
-<!DOCTYPE html>
 <html>
 
 <head>
-    <script src="calculosss.js"></script>
-	
+	<script src="index.js"></script>
 	<meta charset="utf-8">
 	<title>Estatistica</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -12,18 +10,18 @@
 </head>
 
 <body>
-    <div class="main-holder">
-   
-			<h1 align="center"> ON System</h1> 
+	<div class="container">
+		<p>
+			<h1 align="center"> ON System</h1>
 		</p>
 		<div id="ed">
 			<h2>Estatistica Descritiva</h2>
-			<hr/>
+			<hr />
 			<form>
 				<div>
 					<div>
 						<p>
-							<h3 align="lift">Tipo de Variável</h3>
+							<h3>Tipo de Variável</h3>
 						</p>
 						<p>
 							<select id="tipoVariavel">
@@ -45,13 +43,13 @@
 							</p>
 							<p>
 								<label>
-									<input type="radio" name="op" id="proces1" value="1" checked />
+									<input type="radio" name="op" id="amostra" value="1" checked />
 									<span>Amostra</span>
 								</label>
 							</p>
 							<p>
 								<label>
-									<input type="radio" name="op" id="proces2" value="2" />
+									<input type="radio" name="op" id="populacao" value="2" />
 									<span>População</span>
 								</label>
 							</p>
@@ -64,7 +62,7 @@
 					<div>
 						<div id="divQ">
 							<h3>Medidas Separatrizes </h3>
-							<select id="selectQ">
+							<select id="quartil">
 								<option value="" disabled selected>Quartil</option>
 								<option value="25">Q1</option>
 								<option value="50">Q2</option>
@@ -75,7 +73,7 @@
 
 						<div id="divK">
 							<br>
-							<select id="selectK">
+							<select id="quintil">
 								<option value="" disabled selected>Kintil</option>
 								<option value="20">K1</option>
 								<option value="40">K2</option>
@@ -87,7 +85,7 @@
 
 						<divid="divD">
 							<br>
-							<select id="selectD">
+							<select id="decil">
 								<option value="" disabled selected>Decil</option>
 								<option value="10">D1</option>
 								<option value="20">D2</option>
@@ -104,7 +102,7 @@
 
 					<div id="divP">
 						<br>
-						<select id="selectP">
+						<select id="porcentil">
 							<option value="" disabled selected>Porcentil</option>
 							<option value="1">P1</option>
 							<option value="2">P2</option>
@@ -211,7 +209,7 @@
 				</div>
 				<br />
 				<div>
-					<p>Insira os dados </p><input id="coleta" type="text" class="validate" placeholder="Ex: 1;2;3;4;5">
+					<p>Insira os dados </p><input id="dados" type="text" class="validate" placeholder="Ex: 1;2;3;4;5">
 
 				</div>
 		</div>
@@ -221,18 +219,12 @@
 			<p><a id="startgg" href="#saidagg" onclick="entrada()" class="btn btn-primary btn-sm ">Calcular</a></p>
 		</div>
 		</form>
-		<hr/>
-		<div id="saidagg startgg">
-
+		<hr />
+		<div id="saidagg startgg" class="row">
 			<p id="resultado"></p>
 			<p id="mmm"></p>
 			<p id="saidaseparatriz"></p>
-
-
 		</div>
 	</div>
-
 </body>
-</html> 
-
 </html>
