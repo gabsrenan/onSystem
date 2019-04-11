@@ -1,26 +1,18 @@
 
-a{
-    
-    
+a{   
     font-size: 20px; 
-    font-style: italic
-
-
+    font-style: italic;
 }
 
 .titulo{
-color: rgb(255, 196, 0)
+color: rgb(255, 196, 0);
 
 }
 
 .mensagem{
-    font-size: 20px; 
-    font-style: italic
-    color:rgba(52, 32, 230, 0.726)
-
-   
-    
-    
+    font-size: 20px;
+    font-style: italic;
+    color:rgba(52, 32, 230, 0.726), 
 }
 .footer {
     position:absolute;
@@ -31,11 +23,6 @@ color: rgb(255, 196, 0)
 .mensagem2{
     text-align: center;
     font-size: 40px; 
-    font-style: italic
+    font-style: italic;
     color:rgba(52, 32, 230, 0.726)
-    
-
-   
-    
-    
 }

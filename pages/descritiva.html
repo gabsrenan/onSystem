@@ -1,89 +1,89 @@
 <html>
 
 <head>
-	<script src="index.js"></script>
+	<script src="../javascript/index.js"></script>
 	<meta charset="utf-8">
 	<title>Estatistica</title>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-		<link rel='stylesheet' type='text/css' media='screen' href="sty.css">
-		<link rel='stylesheet' type='text/css' media='screen' href="tema.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+	 crossorigin="anonymous">
+	<link rel='stylesheet' type='text/css' media='screen' href="../styles/style.css">
+	<link rel='stylesheet' type='text/css' media='screen' href="tema.css">
 </head>
 
 
 
 <body>
 	<div class="container">
-			<div>
-					<a href="index.html">Home</a> 
-					</dive>
-		
-		
-		<p>
-			<div class="titulo">
-			<h1 align="center"> ON System</h1>
-		</p>
+		<div>
+			<a href="index.html">Home</a>
+			</dive>
+
+
+			<p>
+				<div class="titulo">
+					<h1 align="center"> ON System</h1>
+			</p>
 			</div>
-		<div id="ed">
-			<h2>Estatistica Descritiva</h2>
-			<hr />
-			<form>
-				<div>
+			<div id="ed">
+				<h2>Estatistica Descritiva</h2>
+				<hr />
+				<form>
 					<div>
-						<p>
-							<h3>Tipo de Variável</h3>
-						</p>
-						<p>
-							<select id="tipoVariavel">
+						<div>
+							<p>
+								<h3>Tipo de Variável</h3>
+							</p>
+							<p>
+								<select id="tipoVariavel">
 								<option value="QLordinal">Qualitativa Ordinal</option>
 								<option value="QLnominal">Qualitativa Nominal</option>
 								<option value="QNdiscreta">Quantitaviva Discreta</option>
 								<option value="QNcontinua">Quantitaviva Continua</option>
 							</select>
-						</p>
-					</div>
-					<hr />
-					<div>
-						<p>
-							<h3>Processo Estatístico</h3>
-						</p>
+							</p>
+						</div>
+						<hr />
 						<div>
 							<p>
-								Tipo de Pesquisa:
+								<h3>Processo Estatístico</h3>
 							</p>
-							<p>
-								<label>
+							<div>
+								<p>
+									Tipo de Pesquisa:
+								</p>
+								<p>
+									<label>
 									<input type="radio" name="op" id="amostra" value="1" checked />
 									<span>Amostra</span>
 								</label>
-							</p>
-							<p>
-								<label>
+								</p>
+								<p>
+									<label>
 									<input type="radio" name="op" id="populacao" value="2" />
 									<span>População</span>
 								</label>
-							</p>
+								</p>
+							</div>
+							Nome da Variavel <input id="nomevar" type="text" class="validate">
 						</div>
-						Nome da Variavel <input id="nomevar" type="text" class="validate">
-					</div>
-					<hr />
+						<hr />
 
 
-					<div>
-						<div id="divQ">
-							<h3>Medidas Separatrizes </h3>
-							<select id="quartil">
+						<div>
+							<div id="divQ">
+								<h3>Medidas Separatrizes </h3>
+								<select id="quartil">
 								<option value="" disabled selected>Quartil</option>
 								<option value="25">Q1</option>
 								<option value="50">Q2</option>
 								<option value="75">Q3</option>
 								<option value="100">Q4</option>
 							</select>
-						</div>
+							</div>
 
-						<div id="divK">
-							<br>
-							<select id="quintil">
+							<div id="divK">
+								<br>
+								<select id="quintil">
 								<option value="" disabled selected>Kintil</option>
 								<option value="20">K1</option>
 								<option value="40">K2</option>
@@ -91,11 +91,11 @@
 								<option value="80">K4</option>
 								<option value="100">K5</option>
 							</select>
-						</div>
+							</div>
 
-						<divid="divD">
-							<br>
-							<select id="decil">
+							<divid="divD">
+								<br>
+								<select id="decil">
 								<option value="" disabled selected>Decil</option>
 								<option value="10">D1</option>
 								<option value="20">D2</option>
@@ -108,11 +108,11 @@
 								<option value="90">D9</option>
 								<option value="100">D10</option>
 							</select>
-					</div>
+						</div>
 
-					<div id="divP">
-						<br>
-						<select id="porcentil">
+						<div id="divP">
+							<br>
+							<select id="porcentil">
 							<option value="" disabled selected>Porcentil</option>
 							<option value="1">P1</option>
 							<option value="2">P2</option>
@@ -215,26 +215,27 @@
 							<option value="99">P99</option>
 							<option value="100">P100</option>
 						</select>
+						</div>
 					</div>
-				</div>
-				<br />
-				<div>
-					<p>Insira os dados </p><input id="dados" type="text" class="validate" placeholder="Ex: 1;2;3;4;5">
+					<br />
+					<div>
+						<p>Insira os dados </p><input id="dados" type="text" class="validate" placeholder="Ex: 1;2;3;4;5">
 
-				</div>
-		</div>
+					</div>
+			</div>
 
 
-		<div>
-			<p><a id="startgg" href="#saidagg" onclick="entrada()" class="btn btn-primary btn-sm ">Calcular</a></p>
+			<div>
+				<p><a id="startgg" href="#saidagg" onclick="entrada()" class="btn btn-primary btn-sm ">Calcular</a></p>
+			</div>
+			</form>
+			<hr />
+			<div id="saidagg startgg" class="row">
+				<p id="resultado"></p>
+				<p id="mmm"></p>
+				<p id="saidaseparatriz"></p>
+			</div>
 		</div>
-		</form>
-		<hr />
-		<div id="saidagg startgg" class="row">
-			<p id="resultado"></p>
-			<p id="mmm"></p>
-			<p id="saidaseparatriz"></p>
-		</div>
-	</div>
 </body>
+
 </html>

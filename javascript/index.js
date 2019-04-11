@@ -1,6 +1,6 @@
 function entrada() {
   var vetor = [];
-  
+
 
   var dados = document.getElementById("dados").value;
   var nomevar = document.getElementById("nomevar").value;
@@ -27,7 +27,7 @@ function entrada() {
   for (let i = 0; i < vetor.length; i++) {
     vetor[i] = vetor[i].replace(",", ".");
   }
- // Tipo de processo
+  // Tipo de processo
   var amostra = document.getElementById("amostra").checked;
   //QUANTITATIVA
   if (isNaN(vetor[0]) != true) {
@@ -37,11 +37,11 @@ function entrada() {
 
     var left = 0;
     var right = vetor.length;
-    
+
     quicksort(vetor, left, right);
-    
+
     quantitativa(vetor, nomevar, amostra, separatriz, valorsep);
-  //QUALITATIVA
+    //QUALITATIVA
   } else {
     for (var i = 0; i < vetor.length; i++) {
       vetor[i] = vetor[i].toUpperCase();
@@ -54,7 +54,7 @@ function entrada() {
   }
   separatrizes(vetor, valorsep, separatriz);
 }
- // QUICKSORT
+// QUICKSORT
 function particao(vetor, left, right) {
   var i, j, aux;
   i = left;
@@ -116,7 +116,7 @@ function qualitativa(vetor, nomevar) {
   }
   //Moda
   var moda = "";
-  
+
   for (var i = 0; i < quantidade.length; i++) {
     if (aux == quantidade[i]) {
       moda = moda + " " + elemento[i];
@@ -126,6 +126,7 @@ function qualitativa(vetor, nomevar) {
       moda = " Não tem moda";
     }
   }
+ mediana = "";
   var posicao = totalV / 2;
   if (totalV % 2 == 0) {
     if (vetor[posicao - 1] == vetor[posicao]) {
@@ -136,6 +137,7 @@ function qualitativa(vetor, nomevar) {
   } else {
     mediana = vetor[Math.round(posicao)];
   }
+
   
   //saida de dados
   exibe = exibe + "</tbody> </table>";
@@ -162,16 +164,16 @@ function quantitativa(vetor, nomevar, amostra, separatriz, valorsep) {
   var quant = [];
   var element = [];
   var amplitude = [];
- 
- 
+
+
   for (let i = 0; i < vetor.length; i++) {
     elemento[i] = vetor[i];
   }
-  
+
   var elemento = [...new Set(vetor)];
   var cont = 0;
   var totalV = 0;
- 
+
   for (let i = 0; i < elemento.length; i++) {
     cont = 0;
     for (let j = 0; j < vetor.length; j++) {
@@ -185,7 +187,7 @@ function quantitativa(vetor, nomevar, amostra, separatriz, valorsep) {
   //caso o elemento tenha mais de 10 elementos diferentes ele será continuo , se tiver menos de 10 será discreto
   if (elemento.length >= 10) {
     separatriz = 0;
-    
+
     var amplitude = vetor[vetor.length - 1] - vetor[0];
     var clas = Math.floor(Math.sqrt(totalV));
     classe[0] = clas - 1;
@@ -257,15 +259,15 @@ function quantitativa(vetor, nomevar, amostra, separatriz, valorsep) {
       dp = dp + Math.pow(element[i] - media, 2) * quant[i];
     }
     if (amostra === true) {
-      
+
       dp = dp / (totalV - 1);
       dp = Math.sqrt(dp);
     } else {
-      
+
       dp = dp / totalV;
       dp = Math.sqrt(dp);
     }
-    
+
     var CV = (dp / media) * 100;
 
     exibe = exibe + "</tbody> </tabela>";
@@ -287,21 +289,21 @@ function quantitativa(vetor, nomevar, amostra, separatriz, valorsep) {
     }
     var moda = "";
     for (var i = 0; i < quantidade.length; i++) {
-      
+
       if (aux == quantidade[i]) {
         moda = moda + "  " + elemento[i];
         cont++;
       }
-      
+
       if (cont == quantidade.length) {
         moda = "Não tem moda";
       }
     }
     var posicao = totalV / 2;
     if (totalV % 2 == 0) {
-      if (vetor[posicao - 1] == vetor[posicao]) {        
+      if (vetor[posicao - 1] == vetor[posicao]) {
         mediana = vetor[posicao];
-      } else {   
+      } else {
         mediana = (vetor[posicao] + vetor[posicao - 1]) / 2;
       }
     } else {
@@ -337,7 +339,7 @@ function quantitativa(vetor, nomevar, amostra, separatriz, valorsep) {
       "O Coeficiente de variação é de : " +
       CV.toFixed(2) +
       "%";
-    document.getElementById("exibe").innerHTML = exibe;
+
     moda = "";
   }
 }
