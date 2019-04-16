@@ -125,7 +125,7 @@ function qualitativa(vetor, nomevar) {
       mediana = vetor[posicao] + " e " + vetor[posicao - 1];
     }
   } else {
-    
+
     mediana = vetor[Math.round(posicao)];
   }
   var fac = 0;
@@ -347,7 +347,9 @@ function quantitativa(vetor, nomevar, amostra, separatriz, valorsep) {
     classe[0] = clas - 1;
     classe[1] = clas;
     classe[2] = clas + 1;
-    
+
+    var auxcont = 1;
+    var linhas = 0;
     var intervalo = 0;
 
     while (auxcont != 0) {
@@ -486,8 +488,8 @@ function quantitativa(vetor, nomevar, amostra, separatriz, valorsep) {
       menorv = menorv + intervalo;
     }
     mediana = liminf + ((posicao - facant) / linhas) * intervalo;
-
-    console.log(res);
+    var res = liminf+((valorsep-facant)/linhas)*intervalo;
+    
 
     var dp = 0;
     for (let i = 0; i < quant.length; i++) {
@@ -550,7 +552,7 @@ function quantitativa(vetor, nomevar, amostra, separatriz, valorsep) {
     }
 
     var posicao = totalV / 2;
-    
+
     if (totalV % 2 == 0) {
       if (vetor[posicao - 1] == vetor[posicao]) {
 
@@ -617,7 +619,7 @@ function quantitativa(vetor, nomevar, amostra, separatriz, valorsep) {
         "% </td>" +
         "</tr>";
     }
-  
+
 
     exibe = exibe + "</tbody> </tabela>";
     document.getElementById("saida").innerHTML =
