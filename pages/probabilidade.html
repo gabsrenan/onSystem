@@ -4,63 +4,162 @@
 <head>
 
     <title>Page Title</title>
+    <meta charset="utf-8">
 
-    <link rel='stylesheet' type='text/css' media='screen'href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel='stylesheet' type='text/css' media='screen'
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel='stylesheet' type='text/css' media='screen' href="../styles/style.css">
-    <script src='main.js'></script>
+    <script src='../javascript/probabilidade.js'></script>
+    <script>
+        function verificarValorDist() {
+            valor = document.getElementById("selTipoDist").value;
+            if (valor == "DN") {
+                clickNormal();
+            } else if (valor == "DU") {
+                clickUniforme();
+            } else if (valor == "DB") {
+                clickBinomial();
+            }
+        }
+        function clickNormal() {
+            document.getElementById("dBinomial").style.display = "none";
+            document.getElementById("dUniforme").style.display = "none";
+            document.getElementById("dNormal").style.display = "block";
+            document.getElementById("btncalcDist").disabled = false;
+            document.getElementById("saidaDist").style = "display : none;"
+            limparSaida();
+        }
+        function clickUniforme() {
+            document.getElementById("dBinomial").style.display = "none";
+            document.getElementById("dNormal").style.display = "none";
+            document.getElementById("dUniforme").style.display = "block";
+            document.getElementById("btncalcDist").disabled = false;
+            document.getElementById("saidaDist").style = "display : none;"
+            limparSaida();
+        }
+        function clickBinomial() {
+            document.getElementById("dUniforme").style.display = "none";
+            document.getElementById("dNormal").style.display = "none";
+            document.getElementById("dBinomial").style.display = "block";
+            document.getElementById("btncalcDist").disabled = false;
+            document.getElementById("saidaDist").style = "display : none;"
+            limparSaida();
+        }
+    </script>
 </head>
 
 
 <body>
-    <!-- inicio Body -->
-
-    <!-- div inicio cabeçalho -->
     <div class="w-auto p-3" style="background-color: rgba(13, 17, 252, 0.479);">
         <div class="titulo">
             <h1 align="center"> ON System</h1>
         </div>
         <a href="../index.html" onclick="entrada()" class="btn btn-primary btn-sm ">Home</a>
     </div>
-      <!--  fim cabeçalho -->
 
-      <div class="container">    <!--  inicio container -->
-            <p>
-                    <h3>Dristribuição Uniforme</h3>
-                    </p>
+    <div id="dDist" class="container">
+        <div id="dDist">
+            <form id="formularioDist">
+                <label id="labelTipoDist"></label>
+                <div id="dSelDist">
+                    <h3>Tipo de Distribuição</h3>
+                    <br />
+                    <select id="selTipoDist" onchange="verificarValorDist()">
+                        <option value="nulo" id="nullDist">Selecione o tipo de distribuição</option>
+                        <option value="DN">Distribuição Normal</option>
+                        <option value="DU">Distribuição Uniforme</option>
+                        <option value="DB">Distribuição Binomial</option>
+                    </select>
+                </div>
+                <br />
+
+                <div id="dBinomial" style="display: none;">
                     <div>
-                    Ponto maximo <input id="nomevar" type="text" class="validate">
+                        <label>N:</label>
+                        <input type="text" name="txtN" id="txtN">
                     </div>
-                    <p> </p>
-                     <div>
-                     Ponto minimo <input id="nomevar" type="text" class="validate">
+                    <div>
+                        <label for="txtK">K:</label>
+                        <input type="text" placeholder="Use ponto e vírgula para separar os dados." name="txtK"
+                            id="txtK">
                     </div>
-                            <div>
-                                <p>
-                                    <h3>Intervalo da Analise</h3>
-                                </p>
-                            </div>
-                    
-                        <div>
-                            <p>
-                            <select id="intervalorA">
-                            <option value="menorQ">Menor Que </option>
+                    <div>
+                        <label for="txtP">P:</label>
+                        <input type="text" name="txtP" id="txtP">
+                    </div>
+                    <div>
+                        <label for="txtQ">Q:</label>
+                        <input type="text" name="txtQ" id="txtQ">
+                    </div>
+                </div>
+
+                <div id="dNormal" style="display: none;">
+                    <div>
+                        <label for="txtNTrans">Dados</label>
+                        <input type="text" name="txtNTrans" id="txtNTrans"
+                            placeholder="Use ponto e vírgula para separar os dados.">
+                    </div>
+                    <div>
+                        <label for="txtMediaDN">Média</label>
+                        <input type="text" name="txtMediaDN" id="txtMediaDN">
+                    </div>
+                    <div>
+                        <label for="txtDesvioDN">Desvio Padrão</label>
+                        <input type="text" name="txtDesvioDN" id="txtDesvioDN">
+                    </div>
+                    <div>
+                        <label>Intervalo da análise</label>
+                        <select id="selOPNormal">
                             <option value="entre">Entre</option>
                             <option value="maiorQ">Maior Que</option>
-                            </select>
-                            </p>
-                        </div>
-                    <div>
-                    Dados <input id="nomevar" type="text" class="validate">
+                            <option value="menorQ">Menor Que</option>
+                        </select>
                     </div>
-                        <p></p>
-                        <div>
-                            <button type="button" class="btn btn-outline-primary">Calcular</button>
-                        </div>
-</div>  <!--  fim conteiner -->
+                </div>
 
-    
+                <div id="dUniforme" style="display: none;">
+                    <div>
+                        <label for="txtNIntervalo">Números do Intervalo </label>
+                        <input type="text" name="txtNIntervalo" id="txtNIntervalo"
+                            placeholder="Use ponto e vírgula para separar os dados.">
+                    </div>
+                    <div>
+                        <label for="txtPMin">Ponto Mínimo</label>
+                        <input type="text" name="txtPMin" id="txtPMin">
+                    </div>
+                    <div>
+                        <label for="txtPMax">Ponto Máximo</label>
+                        <input type="text" name="txtPMax" id="txtPMax">
+                    </div>
+                    <div>
+                        <label>Opção</label>
+                        <select id="selOPUniforme">
+                            <option value="entre">Entre</option>
+                            <option value="maiorQ">Maior Que</option>
+                            <option value="menorQ">Menor Que</option>
+                            <option value="deAte">De Até</option>
+                        </select>
+                    </div>
+                </div>
+                <br />
+
+                <button type="button" class="btn btn-primary btn-block" id="btncalcDist"
+                    onclick="validacaoDist()">Calcular</button>
+                <br />
+                <div id="saidaDist" style="display: none;">
+
+                    <label>
+                        <h4>Probabilidade:</h4>
+                    </label>
+                    <label id="probResp"></label>
+                    <span class="d-block" id="mediaDU"></span>
+                    <span class="d-block" id="desvioDU"></span>
+                    <span class="d-block" id="CoefDU"></span>
+                </div>
+            </form>
+        </div>
+    </div>
+
 </body>
+
 </html>
-                    
-                        
-                    
