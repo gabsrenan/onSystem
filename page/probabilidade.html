@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head> <!-- INICIO DO HEAD -->
+  <meta charset='utf-8'>
+  
+  <link rel='stylesheet' type='text/css' media='screen'
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"><!--BOOTSTRAP--> 
+ 
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  
+  <title>HOME</title>
+ 
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  
+  <link rel='stylesheet' type='text/css' media='screen' href='../styles/style.css'> <!-- css -->
+
+  <script src='../javascript/probabilidade.js'></script><!-- LEMBRAR DE COLOCAR NO FINAL DA PAGINA -->
+    <script>
+        function verificarValorDist() {
+            valor = document.getElementById("selTipoDist").value;
+            if (valor == "DN") {
+                clickNormal();
+            } else if (valor == "DU") {
+                clickUniforme();
+            } else if (valor == "DB") {
+                clickBinomial();
+            }
+        }
+        function clickNormal() {
+            document.getElementById("dBinomial").style.display = "none";
+            document.getElementById("dUniforme").style.display = "none";
+            document.getElementById("dNormal").style.display = "block";
+            document.getElementById("btncalcDist").disabled = false;
+            document.getElementById("saidaDist").style = "display : none;"
+            limparSaida();
+        }
+        function clickUniforme() {
+            document.getElementById("dBinomial").style.display = "none";
+            document.getElementById("dNormal").style.display = "none";
+            document.getElementById("dUniforme").style.display = "block";
+            document.getElementById("btncalcDist").disabled = false;
+            document.getElementById("saidaDist").style = "display : none;"
+            limparSaida();
+        }
+        function clickBinomial() {
+            document.getElementById("dUniforme").style.display = "none";
+            document.getElementById("dNormal").style.display = "none";
+            document.getElementById("dBinomial").style.display = "block";
+            document.getElementById("btncalcDist").disabled = false;
+            document.getElementById("saidaDist").style = "display : none;"
+            limparSaida();
+        }
+    </script>
+  
+
+</head> <!-- FIM DO HEAD -->
+
+<body  background="imagem.jpg" > 
+
+    
+    
+
+
+    </style>
+   <!-- INICIO BODY -->
+   <div class="container"> <!-- CONTAINER CENTRALIZADO -->
+    <!-- INICIO CABEÇALHO -->
+    
+   
+            <div class="containerimg">
+        
+        <img id="image" src="../jpg/letraaa.png"width="320" height="205">
+        <label id="textoimg"></label>
+      </div>
+    
+    
+    
+    
+      <div class="container-fluid"> 
+        <div class="row justify-content-md-center"> 
+          
+          
+        </div>
+        <div class= "distancia2"> <!-- DINTANCIA DA MARGEM SUPERIOR -->
+        <div class="row">
+          <div class="col">
+              <a href="/page/home.html" class="btn btn-light" role="button" aria-pressed="true">HOME</a>
+          </div>
+          <div class="col-md-auto">
+                <a href="../page/minhaconta.html" class="btn btn-light" role="button" aria-pressed="true">Minha Conta</a>
+          </div>
+          <div class="col-md-auto">
+                <button type="button" class="btn btn-light">FALE COM NOSCO</button>
+          </div>
+          <div class="col col-lg-2">
+                <button type="button" class="btn btn-light">QUEM SOMOS</button>
+          </div>
+        </div>
+      </div>
+    </div> 
+    </div>
+    
+    <!-- FIM CABEÇALHO -->
+    <!-- BOTÃO -->
+    <div class="container"> <!-- CONTAINER CENTRALIZADO -->
+        <div class="container-fluid">
+          <div class="distancia3">
+                    <!-- Botão chama função -->
+            <div class="card text-white bg-warning mb-3" style="max-width: width auto;">
+                <div class="card-header">
+                    <a href="../page/descritiva.html" class="btn btn-outline-dark" role="button" aria-pressed="true">Descritiva</a>
+                    <a href="../page/probabilidade.html" class="btn btn-outline-dark" role="button" aria-pressed="true">Probabilidade</a>
+                    <a href="../page/correlação.html" class="btn btn-outline-dark" role="button" aria-pressed="true">Correlação e Regressão</a>
+                    
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+
+
+<p></p>
+<p></p>
+<div class="textobranco">
+  
+<!-- CALCULOS-->
+<div class="container-fluid"> 
+<div id="dDist" class="container">
+    <div id="dDist">
+        <form id="formularioDist">
+            <label id="labelTipoDist"></label>
+            <div id="dSelDist">
+                <h3>Tipo de Distribuição</h3>
+                <br />
+                <select id="selTipoDist" onchange="verificarValorDist()">
+                    <option value="nulo" id="nullDist">Selecione o tipo de distribuição</option>
+                    <option value="DN">Distribuição Normal</option>
+                    <option value="DU">Distribuição Uniforme</option>
+                    <option value="DB">Distribuição Binomial</option>
+                </select>
+            </div>
+            <br />
+
+            <div id="dBinomial" style="display: none;">
+                <div>
+                    <label>Tamanho da amostra (N):</label>
+                    <input type="text" name="txtN" id="txtN">
+                </div>
+                <div>
+                    <label for="txtK">Evento (K):</label>
+                    <input type="text" placeholder="Use ponto e vírgula para separar os dados." name="txtK"
+                        id="txtK">
+                </div>
+                <div>
+                    <label for="txtP">Sucesso (P):</label>
+                    <input type="text" name="txtP" id="txtP">
+                </div>
+                <div>
+                    <label for="txtQ">Fracasso (Q):</label>
+                    <input type="text" name="txtQ" id="txtQ">
+                </div>
+            </div>
+
+            <div id="dNormal" style="display: none;">
+                <div>
+                    <label for="txtNTrans">Dados</label>
+                    <input type="text" name="txtNTrans" id="txtNTrans"
+                        placeholder="Use ponto e vírgula para separar os dados.">
+                </div>
+                <div>
+                    <label for="txtMediaDN">Média</label>
+                    <input type="text" name="txtMediaDN" id="txtMediaDN">
+                </div>
+                <div>
+                    <label for="txtDesvioDN">Desvio Padrão</label>
+                    <input type="text" name="txtDesvioDN" id="txtDesvioDN">
+                </div>
+                <div>
+                    <label>Intervalo da análise</label>
+                    <select id="selOPNormal">
+                        <option value="entre">Entre</option>
+                        <option value="maiorQ">Maior Que</option>
+                        <option value="menorQ">Menor Que</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="dUniforme" style="display: none;">
+                <div>
+                    <label for="txtNIntervalo">Números do Intervalo </label>
+                    <input type="text" name="txtNIntervalo" id="txtNIntervalo"
+                        placeholder="Use ponto e vírgula para separar os dados.">
+                </div>
+                <div>
+                    <label for="txtPMin">Ponto Mínimo</label>
+                    <input type="text" name="txtPMin" id="txtPMin">
+                </div>
+                <div>
+                    <label for="txtPMax">Ponto Máximo</label>
+                    <input type="text" name="txtPMax" id="txtPMax">
+                </div>
+                <div>
+                    <label>Opção</label>
+                    <select id="selOPUniforme">
+                        <option value="entre">Entre</option>
+                        <option value="maiorQ">Maior Que</option>
+                        <option value="menorQ">Menor Que</option>
+                        <option value="deAte">De Até</option>
+                    </select>
+                </div>
+            </div>
+            <br />
+
+            <button type="button" class="btn btn-outline-warning" id="btncalcDist"
+                onclick="validacaoDist()">Calcular</button>
+            <br />
+            <div id="saidaDist" style="display: none;">
+
+                <label>
+                    <h4>Probabilidade:</h4>
+                </label>
+                <label id="probResp"></label>
+                <span class="d-block" id="mediaDU"></span>
+                <span class="d-block" id="desvioDU"></span>
+                <span class="d-block" id="CoefDU"></span>
+                
+            </div>
+        </form>
+    </div>
+</div>
+</div>
+</div>
+<div class="distacia"></div>
+
+<p></p>
+<p></p>
+<!-- CALCULOS -->
+<h></h>
+<p></p>
+<div class="distacia"> 
+   <p></p>
+</div>
+
+<footer class="footer">
+        <div class="footer2"> <!-- RODA PÉ -->
+    <div class="container">
+      <div class="textobranco">
+        <span class="badge badge-warning">Fatec</span>
+        <span class="badge badge-warning">Duvidas</span>
+        <span class="badge badge-warning">Fale com nosco </span>
+        <span class="badge badge-warning">Copyright2019</span>
+        <div style="float: left; WIDTH: 45%">DEPARTAMENTO
+        <p>Fatec Franca - Dr. Thomaz Novelino </p>
+        
+      
+        
+        
+        </div>
+        <div style="float: right; WIDTH: 25%">  ATENDIMENTO direita
+            Localização. Rua Irênio Grecco, 4580 - 2º Andar Vila Imperador - CEP: 14405-191 - Franca/SP Central SAC: (19) 2114-4444
+          </div>
+        <div style="clear: both"></div>
+     
+         
+            
+  </div>
+  </div>
+  </div>
+  </footer> <!-- FIM RODA PÉ -->
+</div>
+
+
+
+</body><!-- FIM BODY -->
+
+
+
+<script src='main.js'></script> <!-- LINK JS  -->
+<!--BOOTSTRAP--> 
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</html>
