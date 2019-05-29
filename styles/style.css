@@ -8,6 +8,19 @@ body{
     
    
   }
+  .centralizartexto{
+      text-align: center;
+
+  }
+
+.a{
+    text-align: center;
+    
+}
+  
+  .cardfundo{
+      background: black;
+  }
   /* center no repeat fixed imagem irá se ajustar automaticamente ao tamanho da tela*/
 
 
@@ -58,8 +71,6 @@ body{
     top: 135px;
     
   }
-
-
     
 .textobranco{
         
