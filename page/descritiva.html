@@ -41,18 +41,18 @@
     <div class="distancia2"> <!-- DINTANCIA DA MARGEM SUPERIOR -->
     <div class="row">
       <div class="col">
-          <a href="../page/home.html" class="btn btn-light" role="button" aria-pressed="true">HOME</a>
+          <a href="../page/home.html" class="btn btn-outline-info" role="button" aria-pressed="true" style="";>HOME</a>
       </div>
 
 
       <div class="col-md-auto">
-          <a href="../page/minhaconta.html" class="btn btn-light" role="button" aria-pressed="true">Minha Conta</a>
+          <a href="../page/minhaconta.html" class="btn btn-outline-info" role="button" aria-pressed="true">Minha Conta</a>
       </div>
       <div class="col-md-auto">
-            <button type="button" class="btn btn-light">FALE COM NOSCO</button>
+            <button type="button" class="btn btn-outline-info">FALE COM NOSCO</button>
       </div>
       <div class="col col-lg-2">
-            <button type="button" class="btn btn-light">QUEM SOMOS</button>
+            <button type="button" class="btn btn-outline-info">QUEM SOMOS</button>
       </div>
     </div>
   </div>
@@ -69,13 +69,15 @@
               
                 
                 
-      <div class="card " style="max-width: width auto; border-color:rgba(241, 8, 8, 0.521);background:rgba(36, 36, 34, 0.767);">  
+      <div class="card " style="max-width: width auto; border-color:rgba(22, 94, 228, 0.671);background:rgba(31, 30, 28, 0.877);">  
         
         <div class="card-header">
           <div class="centralizartexto">
-              <a href="../page/descritiva.html" class="btn btn-danger" role="button" aria-pressed="true">Descritiva</a>
-              <a href="../page/probabilidade.html" class="btn btn-danger" role="button" aria-pressed="true">Probabilidade</a>
-              <a href="../page/correlação.html" class="btn btn-danger" role="button" aria-pressed="true">Correlação e Regressão</a>
+            
+              <a href="../page/descritiva.html" class="btn btn-info" role="button" aria-pressed="true" style=" background:rgba(0, 0, 0, 0.192);">Descritiva</a>
+            
+              <a href="../page/probabilidade.html" class="btn btn-info" role="button" aria-pressed="true" style=" background:rgba(0, 0, 0, 0.192);">Probabilidade</a>
+              <a href="../page/correlação.html" class="btn btn-info" role="button" aria-pressed="true" style=" background:rgba(0, 0, 0, 0.192);">Correlação e Regressão</a>
             </div>   
           </div>
       </div>
@@ -88,36 +90,39 @@
   p
 </div>
 
-background:rgba(245, 239, 191, 0.486);"&gt;
-  <div class="centralizartexto">
-  <div class="container">
-  <div class="card " style="max-width:auto; border-color:rgba(241, 8, 8, 0.521);background:rgba(36, 36, 34, 0.767);">  
+
+<div class="centralizartexto">
+    <div class="container">
+    <div class="card " style="max-width:auto; border-color:rgba(22, 94, 228, 0.671);background:rgba(31, 30, 28, 0.877);">  
       <div class="textobranco">
-    <div class="card-header"><h2>Estatistica Descritiva</h2></div>
-  </div> 
+      <div class="card-header"><h2>Estatistica Descritiva</h2></div>
+    </div> 
 
     <div class="card-body">
       
-<div class="container"> <!-- div inicio container -->
-  <div class="textobranco">
+  <div class="container"> <!-- div inicio container -->
+    <div class="textobranco">
     <div class="center">
 			
-  <div id="ed">
+   <div id="ed">
 
-<hr>
-<form>
-<div>
+  <hr>
+  <form>
 
-<div>
+
+      
   <p>
-    </p><h3>Processo Estatístico</h3>
+    <h3>Processo Estatístico</h3> </p>
   <p></p>
+  </form>
   <div>
+  </div>
     <p>
       Tipo de Pesquisa:
     </p>
     <p>
       <label>
+          
         <input type="radio" name="op" id="amostra" value="1" checked="">
         <span>Amostra</span>
       </label>
@@ -289,23 +294,28 @@ background:rgba(245, 239, 191, 0.486);"&gt;
 </form></div>
 <br>
 <div>
-<p>Insira os dados </p><input id="dados" type="text" class="validate" placeholder="Ex: 1;2;3;4;5">
+    <div class="textobranco">
+<p><h3>Insira os dados </h3></p><input id="dados" type="text" class="validate" placeholder="Ex: 1;2;3;4;5">
 
 </div>
+<div class="textobranco">
 
   <div class="form-group">
-    <label for="exampleFormControlFile1">Escolha de arquivo</label>
+    <p>
+
+    </p>
+    <label for="exampleFormControlFile1"><h>Escolha de arquivo</label></h>
     <input type="file" class="form-control-file" id="exampleFormControlFile1">
   </div>
 
-</div>
+
 
 
 <div>
   <p>
     
   </p>
-<p><a id="startgg" href="#saidagg" onclick="entrada()" class="btn btn-outline-danger">Calcular</a></p>
+<p><a id="startgg" href="#saidagg" onclick="entrada()" class="btn btn-outline-info">Calcular</a></p>
 </div>
 
 <hr>
@@ -314,7 +324,7 @@ background:rgba(245, 239, 191, 0.486);"&gt;
 <table class=" table-bordered table-dark striped highlight centered responsive-table col-12" id="resultado"></table>
 
 <br>
-</div>
+
 <div>
 <br>
 </div>
@@ -324,9 +334,9 @@ background:rgba(245, 239, 191, 0.486);"&gt;
 <p></p>
 <p id="saida"></p>
 <div class="textobranco">
-    <div class="card " style="max-width: autom;border-color:black;background:rgba(29, 28, 23, 0.534);"><!-- card resposta  -->
+    <div class="card " style="max-width: autom;border-color:rgba(22, 94, 228, 0.671);background:rgba(31, 30, 28, 0.877);"><!-- card resposta  -->
         <div class="card-header">RESULTADO</div>
-        <div class="card-body text-secondary">
+        <div class="card-body text-secondary"> <p>coloca o resultado aqui </p>
         </div>
     </div>
        
