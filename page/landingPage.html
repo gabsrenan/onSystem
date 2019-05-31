@@ -5,8 +5,7 @@
   <!-- INICIO DO HEAD -->
   <meta charset='utf-8'>
 
-  <link rel='stylesheet' type='text/css' media='screen'
-    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel='stylesheet' type='text/css' media='screen' href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <!--BOOTSTRAP-->
 
   <meta http-equiv='X-UA-Compatible' content='IE=edge'>
@@ -15,8 +14,8 @@
 
   <meta name='viewport' content='width=device-width, initial-scale=1'>
 
-  <link rel='stylesheet' type='text/css' media='screen' href='../styles/style.css'> <!-- css -->
-  <link rel='stylesheet' type='text/css' media='screen' href='../styles/logincss.css'> <!-- css -->
+  <link rel='stylesheet' type='text/css' media='screen' href='../styles/style.css'>
+  <!-- css -->
   <script>
     function clickLogin() {
       document.getElementById("home").style.display = "none";
@@ -33,11 +32,11 @@
       document.getElementById("login").style.display = "none";
       document.getElementById("cadastro").style.display = "block";
     }
-
   </script>
-  }
 
-</head> <!-- FIM DO HEAD -->
+
+</head>
+<!-- FIM DO HEAD -->
 
 <body background="imagem.jpg">
 
@@ -67,10 +66,10 @@
         <div class="row">
 
           <div class="col-md-auto">
-            <button onclick="clickHome()"class="btn btn-light">Home</button>
-            
+            <button onclick="clickHome()" class="btn btn-light">Home</button>
+
           </div>
-          
+
 
           <div class="col-md-auto">
             <button onclick="clickLogin()" class="btn btn-light" role="button" aria-pressed="true">Login</button>
@@ -88,131 +87,163 @@
   <!-- FIM CABEÇALHO -->
   <!-- BOTÃO -->
 
-  <div id="home" style="display: none;"><h1>
-      <div class="jumbotron">
-          <h1 class="display-4">Olá, BEM VINDO POW!</h1>
-          <p class="lead">“Sem dados você é apenas mais uma pessoa com uma opinião.”</p>
-          <hr class="my-4">
-          <p>É muito importante aprender estatística porque muitas das decisões que tomamos na vida cotidiana são baseadas em estatísticas.</p>
-            <p>Deixe que ajudemos você a decidir. </p>
-          <a class="btn btn-primary btn-lg" href="#" role="button">Leia mais</a>
-        </div>
-  </h1></div>
-  <div id="cadastro" style="display: none;"><!-- none -->
+  <div id="home" style="display: block;">
+    <div class="container">
+      <!-- CONTAINER CENTRALIZADO -->
+      <div class="container-fluid">
+        <div class="distancia3">
 
-    <div class="card " style="max-width:auto; border-color:rgba(11, 197, 243, 0.671);background:rgba(7, 7, 6, 0.432);">         
-       
+
+
+
+          <!-- carde botão-->
+
+
+
+
+          <div class="distacia">
+            <!--distanci -->
+            <p></p>
+          </div>
+
+
+          <div class="centralizartexto">
+            <!-- centralizar texto -->
+            <div class="container">
+              <!-- div inicio container card-->
+              <!-- carde conteudo -->
+              <div class="card " style="max-width:auto; border-color:rgba(11, 197, 243, 0.671);background:rgba(7, 7, 6, 0.432);">
+                <div class="textobrranco">
+                  <!-- inicio texto branco -->
+                  <div class="card-header">
+
+                    <div class="centralizartexto" style="color: #fff">
+                      <h1 class="display-4">Olá, BEM VINDO!</h1>
+                      <p class="lead">“Sem dados você é apenas mais uma pessoa com uma opinião.”</p>
+                      <hr class="my-4">
+                      <p>É muito importante aprender estatística porque muitas das decisões que tomamos na vida cotidiana são
+                        baseadas em estatísticas.</p>
+                      <p>Deixe que ajudemos você a decidir. </p>
+                    </div>
+                  </div>
+                </div>
+                <!-- fim div texto branco -->
+              </div>
+              <!-- fim card conteudo container card-->
+            </div>
+            <!-- fim div  container card-->
+          </div>
+          <!-- fim centralizar texto -->
+        </div>
+        <!-- fim card resposta -->
+      </div>
+    </div>
+  </div>
+  </div>
+  <div id="cadastro" style="display: none;">
+    <!-- none -->
+    <div class="centralizartexto">
+      <div class="card " style="max-width:auto; border-color:rgba(11, 197, 243, 0.671);background:rgba(7, 7, 6, 0.432);">
+
         <div class="textobranco">
-          <div class="card-header"><h5>Cadasatro</h5></div>
+          <div class="card-header">
+            <h5>CADASTRO</h5>
+          </div>
           <div class="card-body">
             <h5 class="card-title">Crie uma conta para ser nosso membro!</h5>
-            <p class="card-text"> Cadastre rápido para fazer calculos em um estalo de dedo que nem o Thanos .</p>
-         
-      <div class="textobranco">
-        
-            <div calss="center">
-      <form>
-          <div calss="textobranco">
-          <div class="form-row">
-            <div class="form-group col-md-6">
-                <div calss="textobranco">
-              <label for="inputEmail4">Email</label>
-              </div>
-              <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+
+            <div class="textobranco">
+
+
+              <form>
+                <div class="textobranco ">
+                  <div class="form-row ">
+                    <div class="form-group col-md-6 ">
+                      <div class="textobranco">
+                        <label for="inputEmail4">Nome</label>
+                      </div>
+                      <input type="text" class="form-control" id="inputEmail4" placeholder="Nome">
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label for="inputPassword4">Sobrenome</label>
+                      <input type="text" class="form-control" id="inputPassword4" placeholder="Sobrenome">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputAddress">Email</label>
+                    <input type="email" class="form-control" id="inputAddress" placeholder="Email">
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label for="inputAddress2">Senha</label>
+                      <input type="password" class="form-control" id="inputAddress2" placeholder="Senha">
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label for="inputAddress2">Confirmar senha</label>
+                      <input type="password" class="form-control" id="inputAddress2" placeholder="Senha">
+                    </div>
+                  </div>
+
+
+                </div>
+                <a href="../page/home.html" class="btn btn-outline-info" role="button" aria-pressed="true">Cadastrar</a>
             </div>
-            <div class="form-group col-md-6">
-              <label for="inputPassword4">Password</label>
-              <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
-            </div>
+            </form>
           </div>
-          <div class="form-group">
-            <label for="inputAddress">Endereço</label>
-            <input type="text" class="form-control" id="inputAddress" placeholder="rua,bairro">
-          </div>
-          <div class="form-group">
-            <label for="inputAddress2">Complemento</label>
-            <input type="text" class="form-control" id="inputAddress2" placeholder="Apartamento, casa, bloco">
-          </div>
-          <div class="form-row">
-            <div class="form-group col-md-6">
-              <label for="inputCity">Cidade</label>
-              <input type="text" class="form-control" id="inputCity">
-            </div>
-            <div class="form-group col-md-4">
-              <label for="inputState">Estado</label>
-              <select id="inputState" class="form-control">
-                <option selected>Estado...</option>
-                <option>...</option>
-              </select>
-            </div>
-            <div class="form-group col-md-2">
-              <label for="inputZip">Cep</label>
-              <input type="text" class="form-control" id="inputZip">
-            </div>
-          </div>
-          <div class="form-group">
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="gridCheck">
-              <label class="form-check-label" for="gridCheck">
-                concordo Vender minha alma para criar uma conta.
-              </label>
-            </div>
-          </div>
-          <a href="../page/home.html" class="btn btn-outline-info" role="button" aria-pressed="true">Concluir</a>
-        </div>
-        </form>
-        </div>
         </div>
       </div>
     </div>
   </div>
-    
-      </div>
-      </div>
-      <div class="card " style="max-width:auto; border-color:rgba(11, 197, 243, 0.671);background:rgba(7, 7, 6, 0.432);">
+  </div>
+
+  </div>
+  </div>
   <div id="login" style="display: none;">
-    <div class="formCenter">
-      <form class="form-signin">
+    <div class="centralizartexto">
+      <div class="card " style="max-width:auto; border-color:rgba(11, 197, 243, 0.671);background:rgba(7, 7, 6, 0.432);">
+
         <div class="textobranco">
-          <img class="mb-4" src="./jpg/letraaa.png" alt="" width="300" height="200">
-          <h1 class="h3 mb-3 font-weight-normal">Faça login</h1>
-          <label for="inputEmail" class="sr-only">Endereço de email</label>
-          <input type="email" id="inputEmail" class="form-control" placeholder="Seu email" required autofocus>
-          <label for="inputPassword" class="sr-only">Senha</label>
-          <input type="password" id="inputPassword" class="form-control" placeholder="Senha" required>
-          <!-- <div class="checkbox mb-3"-->
-          <label style="align-items: center">
-            <input type="checkbox" value="remember-me"> Lembrar de mim
-          </label>
+          <div class="card-header">
+            <h5>LOGIN</h5>
+          </div>
+          <div class="card-body">
+            <form>
+              <div class="textobranco ">
+                <div class="form-group row justify-content-center">
+                  <div class="form-group col-md-10">
+                    <label for="inputAddress">Email</label>
+                    <input type="email" class="form-control" id="inputAddress" placeholder="Email">
+                  </div>
+                  <div class="form-group col-md-10">
+                    <label for="inputAddress2">Senha</label>
+                    <input type="password" class="form-control" id="inputAddress2" placeholder="Senha">
+                  </div>
+                </div>
+                <a href="../page/home.html" class="btn btn-outline-info" role="button" aria-pressed="true">Entrar</a>
+              </div>
+            </form>
+          </div>
         </div>
-
-        <!--   <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>     teste -->
-        <a href="../page/home.html" class="btn btn-outline-info" role="button" aria-pressed="true">Entrar</a>
-
-
-        <p class="mt-5 mb-3 text-muted" align="center">&copy; 2019</p>
-
-      </form>
+      </div>
     </div>
   </div>
 
-  </div>
-
-  
 
 
 
 
-</body><!-- FIM BODY -->
+</body>
+<!-- FIM BODY -->
 </div>
 
-<script src='main.js'></script> <!-- LINK JS  -->
+<script src='main.js'></script>
+<!-- LINK JS  -->
 <!--BOOTSTRAP-->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-  integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-  integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+  crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+  crossorigin="anonymous"></script>
 
 </html>
