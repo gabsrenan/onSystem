@@ -5,10 +5,10 @@
   <meta charset="utf-8">
 
   <link rel="stylesheet" type="text/css" media="screen" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <!--BOOTSTRAP-->
   <script src="../javascript/descritiva.js"></script>
   <script src="../javascript/probabilidade.js"></script>
-  <script src="../javascript/descritiva.js"></script>
+  <script src="../javascript/correlacao.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script> -->
   <script>
     function clickDescritiva() {
       document.getElementById("descritiva").style.display = "block";
@@ -25,7 +25,6 @@
       document.getElementById("probabilidade").style.display = "none";
       document.getElementById("correlacao").style.display = "block";
     }
-
   </script>
   <script>
     function verificarValorDist() {
@@ -107,12 +106,13 @@
         <!-- DINTANCIA DA MARGEM SUPERIOR -->
         <div class="row">
           <div class="col">
-            <a href="../../index.html" class="btn btn-outline-info" role="button" aria-pressed="true" style="">SAIR</a>
+            <a href="../index.html" class="btn btn-outline-info" role="button" aria-pressed="true" style="">SAIR</a>
           </div>
 
 
           <div class="col-md-auto">
-            <a href="../page/minhaconta.html" class="btn btn-outline-info" role="button" aria-pressed="true">Minha Conta</a>
+            <a href="../page/minhaconta.html" class="btn btn-outline-info" role="button" aria-pressed="true">Minha
+              Conta</a>
           </div>
           <div class="col-md-auto">
             <button type="button" class="btn btn-outline-info">FALE COM NOSCO</button>
@@ -151,6 +151,10 @@
         </div>
       </div>
     </div>
+    <div class="distacia">
+      <!--distanci -->
+      <p></p>
+    </div>
   </div>
   </div>
   <div id="descritiva" style="display: none;">
@@ -168,38 +172,26 @@
             <div class="container">
               <!-- div inicio container -->
               <div class="textobranco">
-                <div class="center">
-
-                  <div id="ed">
-
-
+                <div class="row">
+                  <div id="ed" class="col-6">
                     <form>
+                      <div>
+                        <h4 style="margin-top:10px;">
+                          Tipo de Pesquisa:
+                        </h4>
+                        <div >
+                          <input type="radio" name="op" id="amostra" value="1" checked="" />
+                          <span>Amostra</spasn>
+                          <input type="radio" name="op" id="populacao" value="2">
+                          <span>População</span>
+                        </div>
 
-                      <p>
-                        <h3>Processo Estatístico</h3>
-                      </p>
-                      <p></p>
-                    </form>
-                    <div>
-                    </div>
-                    <p>
-                      Tipo de Pesquisa:
-                    </p>
-                    <p>
-                      <label>
-          
-        <input type="radio" name="op" id="amostra" value="1" checked="">
-        <span>Amostra</span>
-      </label>
-                    </p>
-                    <p>
-                      <label>
-        <input type="radio" name="op" id="populacao" value="2">
-        <span>População</span>
-      </label>
-                    </p>
+                      </div>
                   </div>
-                  Nome da Variavel <input id="nomevar" type="text" class="validate">
+                  <div>
+                    <h4>Nome da Variável</h4>
+                    <input id="nomevar" type="text" class="validate" style="margin-top:10px;">
+                  </div>
                 </div>
                 <hr>
 
@@ -211,151 +203,151 @@
                       <h3>Medidas Separatrizes </h3>
                     </div>
 
-                    <select class="custom-select" id="quartil">
-      <option value="" disabled="" selected="">Quartil</option>
-      <option value="25">Q1</option>
-      <option value="50">Q2</option>
-      <option value="75">Q3</option>
-      <option value="100">Q4</option>
-    </select>
+                    <select class="custom-select col-6" id="quartil">
+                      <option value="" disabled="" selected="">Quartil</option>
+                      <option value="25">Q1</option>
+                      <option value="50">Q2</option>
+                      <option value="75">Q3</option>
+                      <option value="100">Q4</option>
+                    </select>
                   </div>
                 </div>
 
                 <div id="divK">
                   <br>
-                  <select class="custom-select" id="quintil">
-      <option value="" disabled="" selected="">Kintil</option>
-      <option value="20">K1</option>
-      <option value="40">K2</option>
-      <option value="60">K3</option>
-      <option value="80">K4</option>
-      <option value="100">K5</option>
-    </select>
+                  <select class="custom-select col-6" id="quintil">
+                    <option value="" disabled="" selected="">Kintil</option>
+                    <option value="20">K1</option>
+                    <option value="40">K2</option>
+                    <option value="60">K3</option>
+                    <option value="80">K4</option>
+                    <option value="100">K5</option>
+                  </select>
                 </div>
 
                 <divid="divd">
                   <br>
-                  <select class="custom-select" id="decil">
-      <option value="" disabled="" selected="">Decil</option>
-      <option value="10">D1</option>
-      <option value="20">D2</option>
-      <option value="30">D3</option>
-      <option value="40">D4</option>
-      <option value="50">D5</option>
-      <option value="60">D6</option>
-      <option value="70">D7</option>
-      <option value="80">D8</option>
-      <option value="90">D9</option>
-      <option value="100">D10</option>
-    </select>
+                  <select class="custom-select col-6" id="decil">
+                    <option value="" disabled="" selected="">Decil</option>
+                    <option value="10">D1</option>
+                    <option value="20">D2</option>
+                    <option value="30">D3</option>
+                    <option value="40">D4</option>
+                    <option value="50">D5</option>
+                    <option value="60">D6</option>
+                    <option value="70">D7</option>
+                    <option value="80">D8</option>
+                    <option value="90">D9</option>
+                    <option value="100">D10</option>
+                  </select>
                 </divid="divd">
               </div>
 
               <div id="divP">
                 <br>
-                <select class="custom-select" id="porcentil">
-    <option value="" disabled="" selected="">Porcentil</option>
-    <option value="1">P1</option>
-    <option value="2">P2</option>
-    <option value="3">P3</option>
-    <option value="4">P4</option>
-    <option value="5">P5</option>
-    <option value="6">P6</option>
-    <option value="7">P7</option>
-    <option value="8">P8</option>
-    <option value="9">P9</option>
-    <option value="10">P10</option>
-    <option value="11">P11</option>
-    <option value="12">P12</option>
-    <option value="13">P13</option>
-    <option value="14">P14</option>
-    <option value="15">P15</option>
-    <option value="16">P16</option>
-    <option value="17">P17</option>
-    <option value="18">P18</option>
-    <option value="19">P19</option>
-    <option value="20">P20</option>
-    <option value="21">P21</option>
-    <option value="22">P22</option>
-    <option value="23">P23</option>
-    <option value="24">P24</option>
-    <option value="25">P25</option>
-    <option value="26">P26</option>
-    <option value="27">P27</option>
-    <option value="28">P28</option>
-    <option value="29">P29</option>
-    <option value="30">P30</option>
-    <option value="31">P31</option>
-    <option value="32">P32</option>
-    <option value="33">P33</option>
-    <option value="34">P34</option>
-    <option value="35">P35</option>
-    <option value="36">P36</option>
-    <option value="37">P37</option>
-    <option value="38">P38</option>
-    <option value="39">P39</option>
-    <option value="40">P40</option>
-    <option value="41">P41</option>
-    <option value="42">P42</option>
-    <option value="43">P43</option>
-    <option value="44">P44</option>
-    <option value="45">P45</option>
-    <option value="46">P46</option>
-    <option value="47">P47</option>
-    <option value="48">P48</option>
-    <option value="49">P49</option>
-    <option value="50">P50</option>
-    <option value="51">P51</option>
-    <option value="52">P52</option>
-    <option value="53">P53</option>
-    <option value="54">P54</option>
-    <option value="55">P55</option>
-    <option value="56">P56</option>
-    <option value="57">P57</option>
-    <option value="58">P58</option>
-    <option value="59">P59</option>
-    <option value="60">P60</option>
-    <option value="61">P61</option>
-    <option value="62">P62</option>
-    <option value="63">P63</option>
-    <option value="64">P64</option>
-    <option value="65">P65</option>
-    <option value="66">P66</option>
-    <option value="67">P67</option>
-    <option value="68">P68</option>
-    <option value="69">P69</option>
-    <option value="70">P70</option>
-    <option value="71">P71</option>
-    <option value="72">P72</option>
-    <option value="73">P73</option>
-    <option value="74">P74</option>
-    <option value="75">P75</option>
-    <option value="76">P76</option>
-    <option value="77">P77</option>
-    <option value="78">P78</option>
-    <option value="79">P79</option>
-    <option value="80">P80</option>
-    <option value="81">P81</option>
-    <option value="82">P82</option>
-    <option value="83">P83</option>
-    <option value="84">P84</option>
-    <option value="85">P85</option>
-    <option value="86">P86</option>
-    <option value="87">P87</option>
-    <option value="88">P88</option>
-    <option value="89">P89</option>
-    <option value="90">P90</option>
-    <option value="91">P91</option>
-    <option value="92">P92</option>
-    <option value="93">P93</option>
-    <option value="94">P94</option>
-    <option value="95">P95</option>
-    <option value="96">P96</option>
-    <option value="97">P97</option>
-    <option value="98">P98</option>
-    <option value="99">P99</option>
-    <option value="100">P100</option>
-  </select>
+                <select class="custom-select col-6" id="porcentil">
+                  <option value="" disabled="" selected="">Porcentil</option>
+                  <option value="1">P1</option>
+                  <option value="2">P2</option>
+                  <option value="3">P3</option>
+                  <option value="4">P4</option>
+                  <option value="5">P5</option>
+                  <option value="6">P6</option>
+                  <option value="7">P7</option>
+                  <option value="8">P8</option>
+                  <option value="9">P9</option>
+                  <option value="10">P10</option>
+                  <option value="11">P11</option>
+                  <option value="12">P12</option>
+                  <option value="13">P13</option>
+                  <option value="14">P14</option>
+                  <option value="15">P15</option>
+                  <option value="16">P16</option>
+                  <option value="17">P17</option>
+                  <option value="18">P18</option>
+                  <option value="19">P19</option>
+                  <option value="20">P20</option>
+                  <option value="21">P21</option>
+                  <option value="22">P22</option>
+                  <option value="23">P23</option>
+                  <option value="24">P24</option>
+                  <option value="25">P25</option>
+                  <option value="26">P26</option>
+                  <option value="27">P27</option>
+                  <option value="28">P28</option>
+                  <option value="29">P29</option>
+                  <option value="30">P30</option>
+                  <option value="31">P31</option>
+                  <option value="32">P32</option>
+                  <option value="33">P33</option>
+                  <option value="34">P34</option>
+                  <option value="35">P35</option>
+                  <option value="36">P36</option>
+                  <option value="37">P37</option>
+                  <option value="38">P38</option>
+                  <option value="39">P39</option>
+                  <option value="40">P40</option>
+                  <option value="41">P41</option>
+                  <option value="42">P42</option>
+                  <option value="43">P43</option>
+                  <option value="44">P44</option>
+                  <option value="45">P45</option>
+                  <option value="46">P46</option>
+                  <option value="47">P47</option>
+                  <option value="48">P48</option>
+                  <option value="49">P49</option>
+                  <option value="50">P50</option>
+                  <option value="51">P51</option>
+                  <option value="52">P52</option>
+                  <option value="53">P53</option>
+                  <option value="54">P54</option>
+                  <option value="55">P55</option>
+                  <option value="56">P56</option>
+                  <option value="57">P57</option>
+                  <option value="58">P58</option>
+                  <option value="59">P59</option>
+                  <option value="60">P60</option>
+                  <option value="61">P61</option>
+                  <option value="62">P62</option>
+                  <option value="63">P63</option>
+                  <option value="64">P64</option>
+                  <option value="65">P65</option>
+                  <option value="66">P66</option>
+                  <option value="67">P67</option>
+                  <option value="68">P68</option>
+                  <option value="69">P69</option>
+                  <option value="70">P70</option>
+                  <option value="71">P71</option>
+                  <option value="72">P72</option>
+                  <option value="73">P73</option>
+                  <option value="74">P74</option>
+                  <option value="75">P75</option>
+                  <option value="76">P76</option>
+                  <option value="77">P77</option>
+                  <option value="78">P78</option>
+                  <option value="79">P79</option>
+                  <option value="80">P80</option>
+                  <option value="81">P81</option>
+                  <option value="82">P82</option>
+                  <option value="83">P83</option>
+                  <option value="84">P84</option>
+                  <option value="85">P85</option>
+                  <option value="86">P86</option>
+                  <option value="87">P87</option>
+                  <option value="88">P88</option>
+                  <option value="89">P89</option>
+                  <option value="90">P90</option>
+                  <option value="91">P91</option>
+                  <option value="92">P92</option>
+                  <option value="93">P93</option>
+                  <option value="94">P94</option>
+                  <option value="95">P95</option>
+                  <option value="96">P96</option>
+                  <option value="97">P97</option>
+                  <option value="98">P98</option>
+                  <option value="99">P99</option>
+                  <option value="100">P100</option>
+                </select>
               </div>
               </form>
             </div>
@@ -373,7 +365,9 @@
                   <p>
 
                   </p>
-                  <label for="exampleFormControlFile1"><h>Escolha de arquivo</label></h>
+                  <label for="exampleFormControlFile1">
+                    <h>Escolha de arquivo
+                  </label></h>
                   <input type="file" class="form-control-file" id="exampleFormControlFile1">
                 </div>
 
@@ -389,8 +383,6 @@
 
                 <hr>
 
-                <table class=" table-bordered table-dark striped highlight centered responsive-table col-12" id="exibe"></table>
-                <table class=" table-bordered table-dark striped highlight centered responsive-table col-12" id="resultado"></table>
 
                 <br>
 
@@ -401,13 +393,17 @@
 
 
                 <p></p>
-                <p id="saida"></p>
-                <div class="textobranco">
+
+                <div class="textobranco" id="saidaDescritiva" style="display: none;">
                   <div class="card " style="max-width: autom;border-color:rgba(11, 197, 243, 0.671);background:rgba(31, 30, 28, 0.877);">
                     <!-- card resposta  -->
                     <div class="card-header">RESULTADO</div>
                     <div class="card-body text-secondary">
-                      <p>coloca o resultado aqui </p>
+                      <p id="startgg"></p>
+                      <table class=" table-bordered table-dark striped highlight centered responsive-table col-12" id="exibe">
+                      </table>
+                      <table class=" table-bordered table-dark striped highlight centered responsive-table col-12" id="resultado"></table>
+
                     </div>
                   </div>
 
@@ -419,21 +415,8 @@
         </div>
       </div>
     </div>
-    <div class="card " style="max-width: width auto; border-color:rgba(11, 197, 243, 0.671);background:rgba(31, 30, 28, 0.877);">
+  </div>
 
-      <div class="card-header" style="display: none;">
-        <div class="centralizartexto">
-          <!-- Botão chama função -->
-          <a href="../page/descritiva.html" class="btn btn-info" role="button" aria-pressed="true" style=" background:rgba(0, 0, 0, 0.192);">Descritiva</a>
-
-          <a href="../page/probabilidade.html" class="btn btn-info" role="button" aria-pressed="true" style=" background:rgba(0, 0, 0, 0.192);">Probabilidade</a>
-          <a href="../page/correlação.html" class="btn btn-info" role="button" aria-pressed="true" style=" background:rgba(0, 0, 0, 0.192);">Correlação e Regressão</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  </div>
-  </div>
 
 
   <div class="distacia">
@@ -462,12 +445,12 @@
                     <div id="dSelDist">
                       <h3>Tipo de Distribuição</h3>
                       <br />
-                      <select id="selTipoDist" onchange="verificarValorDist()">
-                            <option value="nulo" id="nullDist">Selecione o tipo de distribuição</option>
-                            <option value="DN">Distribuição Normal</option>
-                            <option value="DU">Distribuição Uniforme</option>
-                            <option value="DB">Distribuição Binomial</option>
-                        </select>
+                      <select id="selTipoDist" onchange="verificarValorDist()" class="custom-select col-6">
+                        <option value="nulo" id="nullDist">Selecione o tipo de distribuição</option>
+                        <option value="DN">Distribuição Normal</option>
+                        <option value="DU">Distribuição Uniforme</option>
+                        <option value="DB">Distribuição Binomial</option>
+                      </select>
                     </div>
                     <br />
 
@@ -506,10 +489,10 @@
                       <div>
                         <label>Intervalo da análise</label>
                         <select id="selOPNormal">
-                                <option value="entre">Entre</option>
-                                <option value="maiorQ">Maior Que</option>
-                                <option value="menorQ">Menor Que</option>
-                            </select>
+                          <option value="entre">Entre</option>
+                          <option value="maiorQ">Maior Que</option>
+                          <option value="menorQ">Menor Que</option>
+                        </select>
                       </div>
                     </div>
 
@@ -529,28 +512,18 @@
                       <div>
                         <label>Opção</label>
                         <select id="selOPUniforme">
-                                <option value="entre">Entre</option>
-                                <option value="maiorQ">Maior Que</option>
-                                <option value="menorQ">Menor Que</option>
-                                <option value="deAte">De Até</option>
-                            </select>
+                          <option value="entre">Entre</option>
+                          <option value="maiorQ">Maior Que</option>
+                          <option value="menorQ">Menor Que</option>
+                          <option value="deAte">De Até</option>
+                        </select>
                       </div>
                     </div>
                     <br />
 
                     <button type="button" class="btn btn-outline-info" id="btncalcDist" onclick="validacaoDist()">Calcular</button>
                     <br />
-                    <div id="saidaDist" style="display: none;">
 
-                      <label>
-                            <h4>Probabilidade:</h4>
-                        </label>
-                      <label id="probResp"></label>
-                      <span class="d-block" id="mediaDU"></span>
-                      <span class="d-block" id="desvioDU"></span>
-                      <span class="d-block" id="CoefDU"></span>
-
-                    </div>
                   </form>
                 </div>
               </div>
@@ -561,26 +534,83 @@
           <p></p>
           <p></p>
           <!-- CALCULOS -->
-          <div class="textobranco">
-            <div class="card " style="max-width: autom;border-color:rgba(11, 197, 243, 0.671);background:rgba(31, 30, 28, 0.877);">
-              <!-- card resposta  -->
-              <div class="card-header">RESULTADO</div>
-              <div class="card-body text-secondary">
-                <p>coloca o resultado aqui </p>
+          <div id="saidaDist" style="display: none;">
+            <div class="textobranco">
+              <div class="card " style="max-width: autom;border-color:rgba(11, 197, 243, 0.671);background:rgba(31, 30, 28, 0.877);">
+                <!-- card resposta  -->
+
+                <div class="card-header">RESULTADO</div>
+                <div class="card-body text-secondary">
+
+
+                  <label>
+                    <h4>Probabilidade:</h4>
+                  </label>
+                  <label id="probResp"></label>
+                  <span class="d-block" id="mediaDU"></span>
+                  <span class="d-block" id="desvioDU"></span>
+                  <span class="d-block" id="CoefDU"></span>
+
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
 
+    </div>
+  </div>
 
 
 
 
+  <div class="centralizartexto">
+    <!-- centralizar texto -->
+    <div class="container">
+      <!-- div inicio container card-->
+      <!-- carde conteudo -->
+      <div class="card " style="max-width:auto; border-color:rgba(11, 197, 243, 0.671);background:rgba(31, 30, 28, 0.877);">
+        <div class="textobranco">
+          <!-- inicio texto branco -->
+          <div id="correlacao" class="card-header" style="display: none;">
+
+            <h2>Correlação e Regressão </h2>
 
 
+            <div class="container" id="correla">
+              <div class="row">
+                <div class="input-field col-6">
+                  <label for="dependente">Variavel independente</label>
+                  <input id="dependente" placeholder="Valores de X separados por ;" type="text" class="validate">
+
+                </div>
+                <div class="input-field col-6">
+                  <label for="independente">Variavel dependente</label>
+                  <input id="independente" placeholder="Valores de Y separados por ;" type="text" class="validate">
+
+                </div>
+                <div class="input-field col s12">
+                  <button onclick="correlacao()" href="#saidacorrela" class="btn btn-outline-info">Calcular</button>
+                </div>
 
 
+              </div>
+            </div>
+            <div class="card-body text-secondary" style="padding:50px">
+              <div class="container section scrollspy" id="saidacorrela">
+                <div id="saidacorrelacao" class="card" style="max-width: auto;border-color:rgba(11, 197, 243, 0.671);background:rgba(31, 30, 28, 0.877); display: none; ">
+
+                  <canvas id="myChart2"></canvas>
+                  <p class="center" id="corelasaida"></p>
+                  <p class="center" id="equacaosaida"></p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
     </div>
     <!-- fim card conteudo container card-->
 
