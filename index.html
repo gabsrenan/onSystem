@@ -18,6 +18,8 @@
   <!-- css -->
   <script>
     function clickLogin() {
+      var email = document.getElementById("email").value;
+      document.getElementById("emailLogin").innerHTML = email;
       document.getElementById("home").style.display = "none";
       document.getElementById("login").style.display = "block";
       document.getElementById("cadastro").style.display = "none";
@@ -31,6 +33,9 @@
       document.getElementById("home").style.display = "none";
       document.getElementById("login").style.display = "none";
       document.getElementById("cadastro").style.display = "block";
+    }
+    function cadastrado() {
+      document.getElementById("login").style.display = "block"
     }
   </script>
 
@@ -51,7 +56,7 @@
   <div class="container">
     <div class="containerimg">
 
-      <img id="image" src="../jpg/letraaa.png" width="320" height="205">
+      <img id="image" src="./jpg/letraaa.png" width="320" height="205">
       <label id="textoimg"></label>
     </div>
 
@@ -107,12 +112,12 @@
           </div>
 
 
-          <div class="centralizartexto">
+          <div class="centralizar" style="padding-right:200px;">
             <!-- centralizar texto -->
             <div class="container">
               <!-- div inicio container card-->
               <!-- carde conteudo -->
-              <div class="card " style="max-width:auto; border-color:rgba(11, 197, 243, 0.671);background:rgba(7, 7, 6, 0.432);">
+              <div class="card box" style="max-width:auto; border-color:rgba(11, 197, 243, 0.671);background:rgba(7, 7, 6, 0.432);">
                 <div class="textobrranco">
                   <!-- inicio texto branco -->
                   <div class="card-header">
@@ -142,8 +147,8 @@
   </div>
   <div id="cadastro" style="display: none;">
     <!-- none -->
-    <div class="centralizartexto">
-      <div class="card " style="max-width:auto; border-color:rgba(11, 197, 243, 0.671);background:rgba(7, 7, 6, 0.432);">
+    <div class="centralizar">
+      <div class="card box" style="height:500px; border-color:rgba(11, 197, 243, 0.671);background:rgba(7, 7, 6, 0.432);">
 
         <div class="textobranco">
           <div class="card-header">
@@ -162,31 +167,31 @@
                       <div class="textobranco">
                         <label for="inputEmail4">Nome</label>
                       </div>
-                      <input type="text" class="form-control" id="inputEmail4" placeholder="Nome">
+                      <input type="text" class="form-control" id="nome" placeholder="Nome">
                     </div>
                     <div class="form-group col-md-6">
                       <label for="inputPassword4">Sobrenome</label>
-                      <input type="text" class="form-control" id="inputPassword4" placeholder="Sobrenome">
+                      <input type="text" class="form-control" id="sobrenome" placeholder="Sobrenome">
                     </div>
                   </div>
                   <div class="form-group">
                     <label for="inputAddress">Email</label>
-                    <input type="email" class="form-control" id="inputAddress" placeholder="Email">
+                    <input type="email" class="form-control" id="email" placeholder="Email">
                   </div>
                   <div class="form-row">
                     <div class="form-group col-md-6">
                       <label for="inputAddress2">Senha</label>
-                      <input type="password" class="form-control" id="inputAddress2" placeholder="Senha">
+                      <input type="password" class="form-control" id="senha" placeholder="Senha">
                     </div>
                     <div class="form-group col-md-6">
                       <label for="inputAddress2">Confirmar senha</label>
-                      <input type="password" class="form-control" id="inputAddress2" placeholder="Senha">
+                      <input type="password" class="form-control" id="confirmaSenha" placeholder="Confirmar senha">
                     </div>
                   </div>
 
 
                 </div>
-                <a href="../page/home.html" class="btn btn-outline-info" role="button" aria-pressed="true">Cadastrar</a>
+                <button onclick="cadastrado()" class="btn btn-outline-info" role="button" aria-pressed="true">Cadastrar</button>
             </div>
             </form>
           </div>
@@ -199,8 +204,8 @@
   </div>
   </div>
   <div id="login" style="display: none;">
-    <div class="centralizartexto">
-      <div class="card " style="max-width:auto; border-color:rgba(11, 197, 243, 0.671);background:rgba(7, 7, 6, 0.432);">
+    <div class="centralizar">
+      <div class="card box" style="height:400px; width: 400px; border-color:rgba(11, 197, 243, 0.671);background:rgba(7, 7, 6, 0.432);">
 
         <div class="textobranco">
           <div class="card-header">
@@ -212,7 +217,7 @@
                 <div class="form-group row justify-content-center">
                   <div class="form-group col-md-10">
                     <label for="inputAddress">Email</label>
-                    <input type="email" class="form-control" id="inputAddress" placeholder="Email">
+                    <input type="email" class="form-control" id="emailLogin" placeholder="Email">
                   </div>
                   <div class="form-group col-md-10">
                     <label for="inputAddress2">Senha</label>
