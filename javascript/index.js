@@ -6,7 +6,6 @@ function entrada() {
   var quintil = document.getElementById("quintil").value;
   var decil = document.getElementById("decil").value;
   var porcentil = document.getElementById("porcentil").value;
-  document.getElementById("saidaDescritiva").style = "display: block"
 
   if (quartil != "") {
     var valorsep = quartil;
@@ -620,6 +619,7 @@ function quantitativa(vetor, nomevar, amostra, separatriz, valorsep) {
         "% </td>" +
         "</tr>";
     }
+
 
     exibe = exibe + "</tbody> </tabela>";
     document.getElementById("saida1").innerHTML =
