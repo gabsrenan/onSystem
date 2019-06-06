@@ -49,10 +49,10 @@
           <a href="../page/minhaconta.html" class="btn btn-outline-info" role="button" aria-pressed="true">Minha Conta</a>
       </div>
       <div class="col-md-auto">
-          <a href="../page/faleconosco.html" class="btn btn-outline-info" role="button" aria-pressed="true">Fale com nosco</a>
+            <button type="button" class="btn btn-outline-info">FALE COM NOSCO</button>
       </div>
       <div class="col col-lg-2">
-          <a href="../page/quemsomos.html" class="btn btn-outline-info" role="button" aria-pressed="true">Quem Somos</a>
+            <button type="button" class="btn btn-outline-info">QUEM SOMOS</button>
       </div>
     </div>
   </div>
@@ -69,10 +69,15 @@
               
                 
                 <!-- carde botão-->
-      
+      <div class="card " style="max-width: width auto; border-color:rgba(11, 197, 243, 0.671);background:rgba(31, 30, 28, 0.877);">  
+        
+        <div class="card-header">
           <div class="centralizartexto">
             <!-- Botão chama função -->
-              
+              <a href="../page/descritiva.html" class="btn btn-info" role="button" aria-pressed="true" style=" background:rgba(0, 0, 0, 0.192);">Descritiva</a>
+            
+              <a href="../page/probabilidade.html" class="btn btn-info" role="button" aria-pressed="true" style=" background:rgba(0, 0, 0, 0.192);">Probabilidade</a>
+              <a href="../page/correlação.html" class="btn btn-info" role="button" aria-pressed="true" style=" background:rgba(0, 0, 0, 0.192);">Correlação e Regressão</a>
             </div>   
           </div>
       </div>
@@ -84,24 +89,43 @@
 <div class="distacia"><!--distanci -->
   <p></p>
 </div>
-<div class="distancia3"><p></p></div>
-<div class="distancia8"><p></p></div>
+
 
 <div class="centralizartexto"><!-- centralizar texto -->
     <div class="container"><!-- div inicio container card-->
       <!-- carde conteudo -->
     <div class="card " style="max-width:auto; border-color:rgba(11, 197, 243, 0.671);background:rgba(31, 30, 28, 0.877);">  
       <div class="textobranco"><!-- inicio texto branco -->
-      <div class="card-header"><h2>MINHA CONTA </h2></div>
-    </div> <!-- fim div texto branco -->
+      <div class="card-header"><h2>Correlação e Regreção </h2></div>
 
-    <div class="card " style="max-width: autom;border-color:black;background:rgba(29, 28, 23, 0.534);"><!-- card resposta  -->
-      <div class="textobranco">
-      <div class="card-header">MINHA CONTA</div>
-      <div class="card-body text-secondary"> <p>MINHA CONTA </p>
+      <div class="container">
+          <div class="textobranco">
+        <div class="distancia2">
+        <h5>corelação e regreção</h5>
+        <div class="">
+        <div>
+        Nome da Varialvel X <input id="nomevar" type="text" class="validate">
+        </div>
+        <p></p>
+        <div>
+        Nome da Variavel Y <input id="nomevar" type="text" class="validate">
+        </div>
+        <div class="distancia2">
+        
+            <p><a id="startgg" href="#saidagg" onclick="entrada()" class="btn btn-outline-info">Calcular</a></p>
+        </div>
+        
+        </div>
+        </div>
+        </div>
+        
+     <!-- fim div card -->
+
+    <div class="card " style="max-width: autom;border-color:rgba(11, 197, 243, 0.671);background:rgba(31, 30, 28, 0.877);"><!-- card resposta  -->
+      <div class="card-header">RESULTADO</div>
+      <div class="card-body text-secondary"> <p>coloca o resultado aqui </p>
       </div>
   </div>
-</div>
       
   
    
@@ -116,43 +140,35 @@
 </div>
 </div>
 
- <!-- DISTANCIA DA PAGINA  RODA PÉ -->
- <div class="distancia3"><p></p></div>
- <div class="distancia8"><p></p></div>
- <div class="distancia"><p></p></div>
- <div class="distancia"><p></p></div>
- <div class="distancia"><p></p></div>
- <div class="distancia"><p></p></div>
- <div class="distancia"><p></p></div><div class="distancia"><p></p></div>
- <div class="distancia5"><p></p></div>
-    <!-- INICIO RODA PÉ -->
- 
-    <div>
-       <footer class="footer">
-         <div class="footer"> 
-       <div class="container">
-         <div class="textobranco">
-           
-           <a href="https://site.fatecfranca.edu.br/" target="_blank" class="badge badge-warning">Fatec</a>
-           <a href="https://site.fatecfranca.edu.br/" target="_blank" class="badge badge-warning">Duvidas</a>
-           <a href="../page/faleconosco.html" target="_blank" class="badge badge-warning">Fale com nosco</a>
-           <a href="https://en.wikipedia.org/wiki/Copyright" target="_blank" class="badge badge-warning">Copyright2019</a>
-           
-           <div style="float: left; WIDTH: 45%">DEPARTAMENTO
-           <p>Fatec Franca - Dr. Thomaz Novelino </p>
-           
-         
-           
-           
-           </div>
-           <div style="float: right; WIDTH: 25%">  ATENDIMENTO 
-            <p> Rua Irênio Grecco, 4580   Franca/SP</p>
-             </div>
-           <div style="clear: both"></div>
-         </div>
-         </div>
-       </footer>
-     <!-- FIM RODA PÉ -->
+
+
+<footer class="footer"><!-- RODA PÉ -->
+    <div class="footer2"> 
+  <div class="container">
+    <div class="textobranco">
+      <span class="badge badge-warning">Fatec</span>
+      <span class="badge badge-warning">Duvidas</span>
+      <span class="badge badge-warning">Fale com nosco </span>
+      <span class="badge badge-warning">Copyright2019</span>
+      <div style="float: left; WIDTH: 45%">DEPARTAMENTO
+      <p>Fatec Franca - Dr. Thomaz Novelino </p>
+      
+    
+      
+      
+      </div>
+      <div style="float: right; WIDTH: 25%">  ATENDIMENTO 
+       <p> Rua Irênio Grecco, 4580 - 2º Andar  Franca/SP</p>
+        </div>
+      <div style="clear: both"></div>
+   
+       
+     </div>
+     </div>     
+</div>
+
+</footer> <!-- FIM RODA PÉ -->
+
 
   
 

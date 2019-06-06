@@ -1,76 +1,248 @@
-<html>
-<link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
-
-<!-- Estilos customizados para esse template -->
-<link href="./styles/logincss.css" rel="stylesheet">
-<link rel='stylesheet' type='text/css' media='screen'
-    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"><!--BOOTSTRAP-->
-
-
-
-    <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" media="screen" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"><!--BOOTSTRAP--> 
+        <script src="../javascript/index.js"> </script>
+        <link rel="stylesheet" type="text/css" media="screen" href="./styles/styleland.css"> <!-- css -->
+ 
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>TypeWriter</title>
 </head>
+<body>
 
-<!--land pag -->
-
-
-
-
-
-<!-- teste alert
-
+<style>
   
-
-<div class="land">
-  <div class="alert alert-danger alert-dismissible">
-    <a href="index.html" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-    <h4 class="alert-heading">BEM VINDO!</h4>
+  body{
+    background: url('./jpg/fundo.jpg') center center no-repeat fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+ 
     
-    <p class="mb-0">Se você acha caro e dificil, Economize Dinheiro! 
-        <p>DEIXE QUE A GENTE RESOLVA PRA VOCÊ<hr>
-      
-      E só dar o  play .</p>
-    <a href="index.html" class="btn btn-outline-warning" role="button" aria-pressed="true">PLAY</a>
+   
+  }
+
+    h1 {
+      max-width: 480px;
+    text-align: center;
+    margin: 60px auto;
+    font-family: 'Courier New', Courier, monospace;
+    color: #fff;
+  }
+
+  h1::after {
+    content: '|';
+    opacity: 1;
+    
+    display: inline-block;
+    animation: blink .7s infinite;
+  }
+
+  @keyframes blink {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+  .textobranco{
+        
+        color: white;
+        font-style: italic;
+    
+    }
+  .rodape {
+        position: absolute;
+        bottom: 0;
+        width:100%;
+        height:100px; 
+        }
+  .containerimg {
+    
+    position:relative;  /*agora poderá ser absolutamente posicionado em relação a parte inferior de seu ancestral*/ 
+    
+   
+    align-items: center;
+    
+  height: 10em;
+  display: flex;
+  align-items: center;
+  justify-content: center }
+
+  h5.blocktext {
+    height: 10em;
+  display: flex;
+  align-items: center 
+}
+    .centrali{
+      align-items: center;
+      align-items: center;
+  justify-content: center }
+    
+  #entra  {
+    position:relative;  /*agora poderá ser absolutamente posicionado em relação a parte inferior de seu ancestral*/ 
+    
+   
+    align-items: center;
+    
+ 
+  
+  align-items: center;
+  justify-content: center }
+  .verde {
+    color:rgba(99, 241, 99, 0.877);
+   
+}
+.azul {
+  color: rgba(76, 239, 245, 0.466);
+   
+}
+#card2{
+  
+	position: absolute; 
+	left: 1000px; /* posiciona a 90px para a esquerda */ 
+	top: 200px; /* posiciona a 70px para baixo */
+  } 
+  #card1{
+  
+	position: absolute; 
+	right: 1000px; /* posiciona a 90px para a esquerda */ 
+	top: 200px; /* posiciona a 70px para baixo */
+	} 
+
+    
+  
+</style>
+
+
+
+
+
+<div class="containerimg">
+   
+    <img id="image" src="./jpg/letraaa.png  " width="320" height="205">
+    <label id="textoimg"></label>
+  </div>
+  <div class="container">
+      <div class="centralizartexto">
+      <a href="./page/login.html" class="btn btn-outline-info" id="entra" role="button" aria-pressed="true" style="";>ENTRAR</a>
+  </div>
+  </div>
+  <div class="conteiner">
+      <div class="conteiner-fluid">
+  
+          <div class="card "id="card1" style="max-width: 18rem; border-color:rgba(11, 197, 243, 0.671);background:rgba(7, 7, 6, 0.521); ">         
+              <div class="card-header"></div>
+              <div class="card-body">
+                  <div class="textobranco">
+                      <h3 >É muito importante aprender <h class="verde"> estatística! </h>
+                        <h3 > porque muitas das decisões que tomamos são
+                        baseadas em  <h class="verde"> estatísticas.</h></h3>
+                      </div>
+              </div>
+            </div>
+
+            <div class="card" id="card2"  clear="left"  style="max-width: 18rem; border-color:rgba(11, 197, 243, 0.671);background:rgba(7, 7, 6, 0.521); ">
+                <div class="card-header"></div>
+                <div class="card-body">
+                    <div class="textobranco">
+
+                   
+            
+            
+            
+                         
+                        <h3 >Deixe que a  <h3 class="verde"> On System! </h3>
+                          <h3 > ajude você a decidir!<p>click agora em </p>   <h3 class="azul">Entrar <h3>para começar</h3> 
+                         </h3>
+                        </div>
+                </div>
+              </div>
+    <div class="textobranco"><!-- inicio texto branco -->
+      <div class="conteiner">
+
+          <div class="centralizartexto"><h1 >“Sem dados você é apenas mais uma pessoa com uma  opinião.”</h1></div>
+    </div> <!-- fim div texto branco -->
   </div>
 </div>
-</div> teste alert -->
 
-
-
-<!--login -->
-<body class="text-center">
-<form class="form-signin">
-  <div class="textobranco">
-  <img class="mb-4" src="./jpg/letraaa.png" alt="" width="300" height="200">
-  <h1 class="h3 mb-3 font-weight-normal">Faça login</h1>
-  <label for="inputEmail" class="sr-only">Endereço de email</label>
-  <input type="email" id="inputEmail" class="form-control" placeholder="Seu email" required autofocus>
-  <label for="inputPassword" class="sr-only">Senha</label>
-   <input type="password" id="inputPassword" class="form-control" placeholder="Senha" required>
-  <!-- <div class="checkbox mb-3"-->
-    <label>
-      <input type="checkbox" value="remember-me"> Lembrar de mim
-    </label>
-  </div>
-  
-  <!--   <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>     teste -->
-  <a href="./page/home.html" class="btn btn-outline-warning" role="button" aria-pressed="true">login</a>
-  <a href="./page/cadastrar.html" class="btn btn-outline-warning" role="button" aria-pressed="true">Cadastrar</a>
-  
-  
-  <p class="mt-5 mb-3 text-muted">&copy; 2019</p>
 </div>
-</form>
 
+  
+</div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="distancia"><p></p></div>
+<div class="distancia"><p></p></div>
+<div class="distancia"><p></p></div>
+<div class="distancia"><p></p></div>
+<div class="distancia"><p></p></div>
+<div class="distancia"><p></p></div>
+<div class="distancia"><p></p></div><div class="distancia"><p></p></div>
+<div class="distancia5"><p></p></div>
+   <!-- INICIO RODA PÉ -->
+
+   <div>
+      <footer class="footer">
+        <div class="footer2"> 
+      <div class="container">
+        <div class="textobranco">
+          
+          <a href="https://site.fatecfranca.edu.br/" target="_blank" class="badge badge-warning">Fatec</a>
+          <a href="https://site.fatecfranca.edu.br/" target="_blank" class="badge badge-warning">Duvidas</a>
+          <a href="https://site.fatecfranca.edu.br/" target="_blank" class="badge badge-warning">Fale com nosco</a>
+          <a href="https://en.wikipedia.org/wiki/Copyright" target="_blank" class="badge badge-warning">Copyright2019</a>
+          
+          <div style="float: left; WIDTH: 45%">DEPARTAMENTO
+          <p>Fatec Franca - Dr. Thomaz Novelino </p>
+          
+        
+          
+          
+          </div>
+          <div style="float: right; WIDTH: 25%">  ATENDIMENTO 
+           <p> Rua Irênio Grecco, 4580   Franca/SP</p>
+            </div>
+          <div style="clear: both"></div>
+        </div>
+        </div>
+      </footer>
+<script>
+  function typeWriter(elemento) {
+    const textoArray = elemento.innerHTML.split('');
+    elemento.innerHTML = '';
+    textoArray.forEach((letra, i) => {
+      setTimeout(() => elemento.innerHTML += letra, 75 * i);
+    });
+  }
+
+  // Se estiver tendo problemas com performance, utilize o FOR loop como abaixo no local do forEach
+  // function typeWriter(elemento) {
+  //   const textoArray = elemento.innerHTML.split('');
+  //   elemento.innerHTML = '';
+  //   for(let i = 0; i < textoArray.length; i++) {
+  //     setTimeout(() => elemento.innerHTML += textoArray[i], 75 * i);
+  //   }
+  // }
+
+  const titulo = document.querySelector('h1');
+  typeWriter(titulo);
+</script>
 
 </body>
-
 </html>
-
-
-<html>

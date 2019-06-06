@@ -6,6 +6,7 @@ function entrada() {
   var quintil = document.getElementById("quintil").value;
   var decil = document.getElementById("decil").value;
   var porcentil = document.getElementById("porcentil").value;
+  document.getElementById("saidaDescritiva").style = "display: block"
 
   if (quartil != "") {
     var valorsep = quartil;
@@ -622,22 +623,18 @@ function quantitativa(vetor, nomevar, amostra, separatriz, valorsep) {
 
 
     exibe = exibe + "</tbody> </tabela>";
-    document.getElementById("saida1").innerHTML =
+    document.getElementById("saida").innerHTML =
       "Media: " +
-      media.toFixed(2) 
-      document.getElementById("saida2").innerHTML =
+      media.toFixed(2) +
       "<br>" +
       "Moda : " +
-      moda 
-      document.getElementById("saida3").innerHTML =
+      moda +
       "<br>" +
       "Mediana: " +
-      mediana 
-      document.getElementById("saida4").innerHTML =
+      mediana +
       "<br>" +
       " Desvio Padrão : " +
-      dp.toFixed(2) 
-      document.getElementById("saida5").innerHTML =
+      dp.toFixed(2) +
       "<br>" +
       "Coeficiente de variação: " +
       CV.toFixed(2) +
@@ -652,6 +649,6 @@ function separatrizes(vetor, valorsep, separatriz) {
     posi = (tamvet * valorsep) / 100;
     var res = vetor[Math.round(posi)];
     document.getElementById("saidaseparatriz").innerHTML =
-      "Medida Separatriz escolhida: " + res;
+      "O valor da Medida Separatriz escolhido é de: " + res;
   }
 }

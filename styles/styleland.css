@@ -1,0 +1,222 @@
+body{
+    background: url('../jpg/fundo.jpg') center center no-repeat fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+ 
+    
+   
+  }
+  .centralizartexto{
+      text-align: center;
+
+  }
+
+.a{
+    text-align: center;
+    
+}
+  
+  .cardfundo{
+      background: black;
+  }
+  /* center no repeat fixed imagem irá se ajustar automaticamente ao tamanho da tela*/
+
+
+
+  
+    
+  }
+  .containerimg2 {
+    
+    
+    position: absolute;
+    left: 300px; /* posiciona a 90px para a esquerda */ 
+    top: -60px; /* posiciona a 70px para baixo */
+    right: -200px;
+  /*  bottom: 0; */ 
+    
+    
+  }
+.centertextemmmm{
+
+
+    text-align: center;/* centraliza tudoo */
+    position: auto;
+}
+
+
+
+
+
+  
+  
+  
+  #textoimg {
+    position: absolute;
+    font-size: 32px;
+    left: 250px;
+    top: 135px;
+    
+  }
+    
+.textobranco{
+        
+    color: white;
+    font-style: italic;
+
+}
+.roxo{
+        
+    color: rgb(134, 47, 248);
+    font-style: italic;
+
+}
+
+.distancia3{ 
+    margin-top: 0.7cm;
+}
+.distancia2{ 
+    margin-top: 0.7cm;
+}
+.distancia{ 
+    margin-top: 5cm;
+ }
+ .distancia5{ 
+    margin-top: 10cm;
+ }
+ .centralizarT{
+    position:absolute; 
+    top:20%;
+    left:35%;
+    transform: translate(-50%, -50%);
+    color:white;
+    font-size: 80px;
+ }
+ .linkhtml {
+    color:white;
+    font-size: 40px; 
+    font-style:Harry P;  
+}
+
+testeeeefooter3 {
+    position:absolute;
+    background-color: rgba(27, 27, 27, 0.747);
+    
+    position:absolute;
+    bottom:0;
+    width: 0%;
+    height:0px;
+  
+    box-shadow: 0px 0px 10px black;
+}
+
+
+//body, html {
+    position: absolute;    
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+
+//section {
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    background-color: whitesmoke;
+    top: 40px;
+    bottom: 40px;
+    width: 100%;
+    overflow: auto;    
+    z-index: 0;
+}
+
+// teste section #container {
+    position: absolute;
+    box-shadow: 0px 0px 10px black;
+    background-color: white;
+    margin: auto;
+    width: 400px;
+    min-height: 100%;
+    right: 0px;
+    left: 0px;
+}
+
+// teste #rodape {
+    width: 100%;
+    height: 50px;
+    
+    position: absolute;
+    background-color: rgba(27, 27, 27, 0.699);
+    height: 100px;
+    width: 50%;
+    bottom: 0;
+    box-shadow: 0px 0px 10px black;
+    z-index: 1;
+
+
+}
+#tela{
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+}
+    
+
+.footer3 {
+    
+    position:absolute; 
+        bottom:0;
+        width:100%;
+        height:100px;   /* Mesma Altura do Rodapé */
+        background:#6cf;
+     
+ }
+
+ .junto{
+    position:fixed;
+    width:100%;
+    height:100px;  
+    
+ }
+.rodape {
+        position: absolute;
+        bottom: 0;
+        width:100%;
+        height:100px; 
+        }
+ 
+        .textoblack{
+        
+            color: black;
+            
+        
+        }
+
+        @charset "UTF-8";
+  /* li a:link {
+            font-size:1.2em;
+      
+            text-decoration: none;
+            
+            display: block;
+            -moz-transition: all 1.2s ease;
+                    -webkit-transition: all 1.2s ease;
+                        -o-transition: all 1.2s ease;
+                            transition: all 1.2s ease;
+            }    transition: all 0.5s ease;
+               
+    
+                    overflow:auto;
+         
+                    position:static;
+                    top:0;
+                    left:0;
+                    }
+               
+
+
+
+
+                
