@@ -621,6 +621,10 @@ function quantitativa(vetor, nomevar, amostra, separatriz, valorsep) {
         "</tr>";
     }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 109318ed8e4c63f3da4620dfbc871e006244925d
     exibe = exibe + "</tbody> </tabela>";
     document.getElementById("saida1").innerHTML =
       "Media: " +
