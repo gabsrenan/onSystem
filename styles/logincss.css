@@ -10,6 +10,13 @@ body{
   -o-background-size: cover;
   background-size: cover;
 }
+@media screen and (min-width: 
+1024px) {
+ #html { min-width: 1000px; }
+}
+body {
+    font-size: 62.5%;
+ }
   
  
 .textobranco{

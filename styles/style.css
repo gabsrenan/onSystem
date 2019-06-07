@@ -8,10 +8,88 @@ body{
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+}
+img {
+    max-width: 100%;
+ }
+ @media screen and (max-width: 1024px) {
+    /*estilos*/
+ }
+
+ .container {
+    max-width: 1128px;
+    margin: 0 auto;
+ }
+ .clearfix:before,
+.clearfix:after {
+   content: " ";
+   display: table;
+}
+
+.clearfix:after {
+   clear: both;
+}
+
+.clearfix {
+   *zoom: 1;
+}
+img,
+picture,
+video,
+embed {
+   max-width: 100%;
+}
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+ }
+ .header {
+    width: 100%;
+    height: 48px;
+    margin-top: 3.6em;
+    margin-bottom: 3.6em;
+ }
+ .menu {
+    width: 74.468085106383%; /*840px / 1128px */
+    float: right;
+ }
+ .banner {
+    background: url('../img/banner.jpg');
+    height: 450px;
+    margin-bottom: 4.8em;
+    position: relative;
+ }
+ .caixa {
+    width: 42.553191489362%; /* 264px / 1128px */
+    padding: 2.4em 4em 2.4em 4em;
+    position: absolute;
+    top: 48px;
+    background: rgba(0,0,0,0.6);
+ }
+ .coluna {
+    width: 23.404255319149%; /* 264px / 1128px */
+    margin-right: 2.127659574468%; /* 24 / 1128px */
+ float: left;
+ }
  
-    
-   
-  }
+ .coluna:last-child {
+    margin-right: 0;
+ }
+
+ @media screen and (max-width: 1128px) {
+    .container {
+       padding: 0 2.4em 0 2.4em;
+    }
+    }
+    @media screen and (max-width: 768px) {
+        .caixa {
+           width: 65%;
+        }
+        }
+body {
+    font-size: 62.5%;
+ }
   .centralizartexto{
       text-align: center;
 
