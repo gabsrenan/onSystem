@@ -6,7 +6,33 @@
 
   <link rel="stylesheet" type="text/css" media="screen" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <!--BOOTSTRAP-->
-  
+  <script>
+    function lerArq(){
+        var arq = document.getElementById("fileDesc").files[0];
+        var reader = new FileReader();
+        reader.onload = function (e) {
+                 var txtDados = document.getElementById("txtDados");
+                 txtDados.value = reader.result;
+             }
+         reader.readAsText(arq);
+         document.getElementById("labelArqD").innerHTML = arq.name;
+    }
+    function lerArqCorr(){
+        var texto;
+        var arq = document.getElementById("fileCorr").files[0];
+        var reader = new FileReader();
+        reader.onload = function (e) {
+                 var txtX = document.getElementById("txtX");
+                 var txtY = document.getElementById("txtY");
+                 texto = reader.result;
+                 texto = texto.split("\n")
+                 txtX.value = texto[0];
+                 txtY.value = texto[1];
+             }
+         reader.readAsText(arq);
+         document.getElementById("labelArqC").innerHTML = arq.name;
+    }
+   </script>
   <script>
     function clickDescritiva() {
       document.getElementById("descritiva").style.display = "block";
@@ -808,7 +834,7 @@
                         </div>
                       </div>
                    <label class="btn btn-primary btn-dark" for="fileDesc">
-                                <input type="file" class="form-control-file border" onchange="lerArq()" id="fileDesc" accept=".csv , .txt" style= "display: none;">
+                                <input type="file" class="form-control-file border" onchange="lerArqCorr()" id="fileDesc" accept=".csv , .txt" style= "display: none;">
                                 Upload arquivo
                             </label>
                     </div>
