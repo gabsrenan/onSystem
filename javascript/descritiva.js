@@ -1,9 +1,8 @@
 function entrada() {
+    valido= true
     formulario = document.getElementById("formDescritiva");
 
-        if (formulario.ed.value == "") {
-          valido = false;
-      }else if (formulario.nomevar.value == "") {
+      else if (formulario.nomevar.value == "") {
           valido = false;
       }
     else if (formulario.dados.value == "") {
