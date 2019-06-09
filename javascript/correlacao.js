@@ -1,4 +1,17 @@
 function correlacao() {
+    var valido = true;
+  
+  formulario = document.getElementById("formCorrelacao");
+
+      if (formulario.dependente.value == "") {
+          valido = false;
+      }else if (formulario.independente.value == "") {
+          valido = false;
+      }
+      if (valido == false) {
+          alert("Preencha todos os campos!!");
+          return 0;
+      }
     var Xdepend = []; var Yindepend = [];var reta=[]; var pontos=[];
     var Xdep = (document.getElementById("dependente").value);
     var Yindep = (document.getElementById("independente").value);
