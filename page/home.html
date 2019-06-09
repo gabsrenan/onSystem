@@ -11,8 +11,8 @@
         var arq = document.getElementById("fileDesc").files[0];
         var reader = new FileReader();
         reader.onload = function (e) {
-                 var txtDados = document.getElementById("txtDados");
-                 txtDados.value = reader.result;
+                 var dados = document.getElementById("dados");
+                 dados.value = reader.result;
              }
          reader.readAsText(arq);
          document.getElementById("labelArqD").innerHTML = arq.name;
@@ -22,12 +22,12 @@
         var arq = document.getElementById("fileCorr").files[0];
         var reader = new FileReader();
         reader.onload = function (e) {
-                 var txtX = document.getElementById("txtX");
-                 var txtY = document.getElementById("txtY");
+                 var dependente = document.getElementById("dependente");
+                 var independente = document.getElementById("independente");
                  texto = reader.result;
                  texto = texto.split("\n")
-                 txtX.value = texto[0];
-                 txtY.value = texto[1];
+                 dependente.value = texto[0];
+                 independente.value = texto[1];
              }
          reader.readAsText(arq);
          document.getElementById("labelArqC").innerHTML = arq.name;
