@@ -1,4 +1,19 @@
 function entrada() {
+    formulario = document.getElementById("formDescritiva");
+
+        if (formulario.ed.value == "") {
+          valido = false;
+      }else if (formulario.nomevar.value == "") {
+          valido = false;
+      }
+    else if (formulario.dados.value == "") {
+      valido = false;
+  }
+      if (valido == false) {
+          alert("Preencha todos os campos!!");
+          return 0;
+      }
+  
   var vetor = [];
   var dados = document.getElementById("dados").value;
   var nomevar = document.getElementById("nomevar").value;
