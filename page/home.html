@@ -422,13 +422,10 @@
                       </div>
                       <div class="textobranco">
         
-                          <div class="form-group">
-                              <p>
-                          
-                              </p>
-                              <label for="exampleFormControlFile1" style="border-radius: 10px;" > <h3>Escolha de arquivo</label></h3>
-                              <input type="file" class="form-control-file" id="exampleFormControlFile1">
-                            </div>
+                          <label class="btn btn-primary btn-dark" for="fileDesc">
+                                <input type="file" class="form-control-file border" onchange="lerArq()" id="fileDesc" accept=".csv , .txt" style= "display: none;">
+                                Upload arquivo
+                            </label>
                           
                         <p><a id="startgg" href="#saidagg" onclick=entrada() class="btn btn-outline-info">Calcular</a></p>
                      
@@ -810,7 +807,10 @@
                           </div>
                         </div>
                       </div>
-          
+                   <label class="btn btn-primary btn-dark" for="fileDesc">
+                                <input type="file" class="form-control-file border" onchange="lerArq()" id="fileDesc" accept=".csv , .txt" style= "display: none;">
+                                Upload arquivo
+                            </label>
                     </div>
                   </div>
                   <div class="card " style="max-width: auto;border-color:rgba(11, 197, 243, 0.671);background:rgba(83, 88, 110, 0.11);"><!-- card resposta  -->
