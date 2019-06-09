@@ -443,15 +443,16 @@
                       <div class="textobranco">
                         <p>
                           <h3>Insira os dados </h3> 
-                        </p><input id="dados" type="text" class="validate" style="border-radius: 5px;" placeholder="Ex: 1;2;3;4;5"><a class="new" href="" rel="nofollow" title=" A documentação sobre isto ainda não foi escrita; por favor aguarde terminar as instruçoes "><code> ?</code></a>
-                        
-                      </div>
-                      <div class="textobranco">
-        
-                          <label class="btn btn-primary btn-dark" for="fileDesc">
+                        </p>
+                         <input id="dados" type="text" name="dados" class="validate" style="border-radius: 5px;" placeholder="Ex: 1;2;3;4;5"><a class="new" href="" rel="nofollow" title=" A documentação sobre isto ainda não foi escrita; por favor aguarde terminar as instruçoes "><code> ?</code></a>
+                        <label class="btn btn-primary btn-dark" for="fileDesc">
                                 <input type="file" class="form-control-file border" onchange="lerArq()" id="fileDesc" accept=".csv , .txt" style= "display: none;">
                                 Upload arquivo
                             </label>
+                      </div>
+                      <div class="textobranco">
+        
+                          
                           
                         <p><a id="startgg" href="#saidagg" onclick=entrada() class="btn btn-outline-info">Calcular</a></p>
                      
@@ -808,13 +809,17 @@
                         <div class="row">
                           <div class="input-field col-6" style="border-radius: 10px;">
                             <label for="dependente">Variavel independente</label>
-                            <input id="dependente" placeholder="Valores de X separados por ;" type="text" class="validate" style="border-radius: 10px;">
+                            <input id="dependente" name="dependente" placeholder="Valores de X separados por ;" type="text" class="validate" style="border-radius: 10px;">
           
                           </div>
                           <div class="input-field col-6" style="border-radius: 10px;">
                             <label for="independente" >Variavel dependente</label>
-                            <input id="independente" placeholder="Valores de Y separados por ;" type="text" class="validate" style="border-radius: 10px;">
-          
+                            <input id="independente" name="independente" placeholder="Valores de Y separados por ;" type="text" class="validate" style="border-radius: 10px;">
+                           <label class="btn btn-primary btn-dark" for="fileDesc">
+                                <input type="file" class="form-control-file border" onchange="lerArqCorr()" id="fileDesc" accept=".csv , .txt" style= "display: none;">
+                                Upload arquivo
+                            </label>
+                            <label id="labelArqC"></label>
                           </div>
                           <div class="input-field col s12">
                             <button onclick="correlacao()" href="#saidacorrela" class="btn btn-outline-info">Calcular</button>
@@ -833,10 +838,8 @@
                           </div>
                         </div>
                       </div>
-                   <label class="btn btn-primary btn-dark" for="fileDesc">
-                                <input type="file" class="form-control-file border" onchange="lerArqCorr()" id="fileDesc" accept=".csv , .txt" style= "display: none;">
-                                Upload arquivo
-                            </label>
+                 
+
                     </div>
                   </div>
                   <div class="card " style="max-width: auto;border-color:rgba(11, 197, 243, 0.671);background:rgba(83, 88, 110, 0.11);"><!-- card resposta  -->
