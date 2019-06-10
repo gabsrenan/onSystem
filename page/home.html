@@ -465,7 +465,7 @@
                           <label class="btn btn-primary btn-dark" for="fileDesc">
                             <input type="file" class="form-control-file border" onchange="lerArq()" id="fileDesc"
                               accept=".csv , .txt" style="display: none;">
-                            Upload arquivo
+                            Escolha um arquivo
                           </label>
                         </div>
         </form>
@@ -934,14 +934,16 @@
                             <label for="independente">Variavel dependente</label>
                             <input id="independente" name="independente" placeholder="Valores de Y separados por ;"
                               type="text" class="validate" style="border-radius: 10px;">
-                            
-                          </div>
-                                                                                       <label class="btn btn-primary btn-dark" for="fileCorr">
+                                                                                       
+                            <label class="btn btn-primary btn-dark" for="fileCorr">
                                 <input type="file" class="form-control-file border" onchange="lerArqCorr()" id="fileCorr" accept=".csv , .txt" style= "display: none;">
-                                Upload arquivo
+                                Escolha um arquivo
                             </label>
                             
                             <label id="labelArqC"></label>
+                          </div>
+                                                                                       
+                            
                           <div class="input-field col s12">
                             <button onclick="correlacao()" href="#saidacorrela"
                               class="btn btn-outline-info">Calcular</button>
