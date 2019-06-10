@@ -42,6 +42,8 @@
       document.getElementById("descritiva").style.display = "block";
       document.getElementById("probabilidade").style.display = "none";
       document.getElementById("correlacao").style.display = "none";
+      
+      
     }
     function clickProbabilidade() {
       document.getElementById("descritiva").style.display = "none";
@@ -52,6 +54,7 @@
       document.getElementById("descritiva").style.display = "none";
       document.getElementById("probabilidade").style.display = "none";
       document.getElementById("correlacao").style.display = "block";
+
     }
   </script>
   <script>
@@ -65,13 +68,17 @@
         clickBinomial();
       }
     }
+    
     function clickNormal() {
+      
       document.getElementById("dBinomial").style.display = "none";
       document.getElementById("dUniforme").style.display = "none";
       document.getElementById("dNormal").style.display = "block";
       document.getElementById("btncalcDist").disabled = false;
       document.getElementById("saidaDist").style = "display : none;"
+      
       limparSaida();
+      
     }
     function clickUniforme() {
       document.getElementById("dBinomial").style.display = "none";
@@ -275,8 +282,8 @@
                             <div>
 
                               <h4>Nome da Variável * </h4><input id="nomevar" type="text" style="border-radius: 10px;"
-                                class="validate"> <a class="new" href="" rel="nofollow"
-                                title=" A documentação sobre isto ainda não foi escrita; por favor aguarde terminar as instruçoes "><code>   ?</code></a>
+                                class="validate"> <a class=""  rel=""
+                                title=" Nome do produto que sera feito a analise Exemplo: marca,empresa,carro,população,objeto e etc "><code>   ?</code></a>
                             </div>
                           </div>
                           <hr>
@@ -306,7 +313,7 @@
                                 <option value="75">Q3</option>
                                 <option value="100">Q4</option>
                               </select>
-                              <a class="new" href="" rel="nofollow" title="Os quartis são as separatrizes que dividem o conjunto em 4 partes iguais.
+                              <a class=""  rel="" title="Os quartis são as separatrizes que dividem o conjunto em 4 partes iguais.
                              Q1 25%, Q2 50%, Q3 75%, Q4 100% "><code> ?</code></a>
 
                             </div>
@@ -322,8 +329,8 @@
                               <option value="80">K4</option>
                               <option value="100">K5</option>
                             </select>
-                            <a class="new" href="" rel="nofollow"
-                              title=" A documentação sobre isto ainda não foi escrita; por favor aguarde terminar as instruçoes "><code> ?</code></a>
+                            <a class=""  rel="" title="Os Kintil são as separatrizes que dividem o conjunto em 5 partes iguais.
+                            k1 20%, k2 40%, k3 60%, k4 80%  k5 100%"><code> ?</code></a>
                           </div>
 
                           <divid="divd">
@@ -341,8 +348,8 @@
                               <option value="90">D9</option>
                               <option value="100">D10</option>
                             </select>
-                            <a class="new" href="" rel="nofollow"
-                              title=" A documentação sobre isto ainda não foi escrita; por favor aguarde terminar as instruçoes "><code> ?</code></a>
+                            <a class=""  rel="" title="Os Decil são as separatrizes que dividem o conjunto em 10 partes iguais.
+                            D10% D20% D30% D40% D50% D60% D70% D80% D90% D100%"><code> ?</code></a>
                           </divid="divd">
                         </div>
 
@@ -451,8 +458,8 @@
                             <option value="99">P99</option>
                             <option value="100">P100</option>
                           </select>
-                          <a class="new" href="" rel="nofollow"
-                            title=" A documentação sobre isto ainda não foi escrita; por favor aguarde terminar as instruçoes "><code> ?</code></a>
+                          <a class=""  rel="" title="Os Decil são as separatrizes que dividem o conjunto em 10 partes iguais.
+                          D10% D20% D30% D40% D50% D60% D70% D80% D90% D100%"><code> ?</code></a>
                         </div>
 
                       </div>
@@ -463,8 +470,7 @@
                             <h3>Insira os dados *</h3>
                           </p>
                           <input id="dados" type="text" name="dados" class="validate" style="border-radius: 5px;"
-                            placeholder="Ex: 1;2;3;4;5"><a class="new" href="" rel="nofollow"
-                            title=" A documentação sobre isto ainda não foi escrita; por favor aguarde terminar as instruçoes "><code> ?</code></a>
+                            placeholder="Ex: 1;2;3;4;5"><a class=""  rel="" title="Quantidade de Frequencias que a variavel se repete."><code> ?</code></a>
                           <label class="btn btn-primary btn-dark" for="fileDesc">
                             <input type="file" class="form-control-file border" onchange="lerArq()" id="fileDesc"
                               accept=".csv , .txt" style="display: none;">
@@ -476,7 +482,7 @@
 
 
         </div>
-        
+        <div class="distancia2"><p></p></div>
           <p><a id="startgg" href="#saidagg" onclick=entrada() class="btn btn-outline-info">Calcular</a></p>
 
           <br>
@@ -500,7 +506,7 @@
 
 
 
-
+          <div id="cardresposta" style="display: none;">
           <div class="card "
             style="max-width: auto;border-color:rgba(11, 197, 243, 0.671);background:rgba(83, 88, 110, 0.11);">
             <!-- card resposta  -->
@@ -556,7 +562,7 @@
                       <h5 id="saidaseparatriz">
                         <h5>
                     </div>
-
+</div>
                     <p>
                       <div class="textobranco">
 
@@ -569,28 +575,42 @@
           <div>      
           </div>
         </div>
-        <div>      
+           
          
                 <script>
             {
          
           
-          var ctx = document.getElementById('myChart');
-          var ctx = document.getElementById('myChart').getContext('2d');
-         var ctx = $('#myChart');
-          var ctx = 'myChart';
+          var ctx = document.getElementById('myChart3');
+          var ctx = document.getElementById('myChart3').getContext('2d');
+         var ctx = $('#myChart3');
+          var ctx = 'myChart3';
             }
         </script>
+        <div class="distancia3">
+            <p></p>
+          </div>
+          <div class="distancia8">
+            <p></p>
+          </div>
+          <div id="grafico" style="display: none;">
+<div class="card " ; style="max-width: auto;border-color:rgba(11, 197, 243, 0.671);background:url('https://media.giphy.com/media/nsHjVgedX9KoM/giphy.gif')   center center no-repeat ;  -webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover; "> <h2> Grafico </h2></div>
 
-<canvas id="myChart" width="400" height="400"></canvas>
+ <div class="card "
+ style="max-width: auto;border-color:rgba(11, 197, 243, 0.671);background:rgba(31, 30, 28, 0.877);max-width: 1auto;">
+<canvas id="myChart3" width="400" height="400"></canvas>
+        </div>
 <script>
-var ctx = document.getElementById('myChart');
-var myChart = new Chart(ctx, {
+var ctx = document.getElementById('myChart3');
+var myChart3 = new Chart(ctx, {
     type: 'bar',
     data: {
         labels: ['resultado', 'exibi', 'Yellow', 'Green', 'Purple', 'Orange'],
         datasets: [{
-            label: 'Frequencia' + nomevar,
+            label: 'Frequencia' ,
             data: [12, 19, 3, 5, 2, 3],
             
             backgroundColor: [
@@ -613,7 +633,7 @@ var myChart = new Chart(ctx, {
         }]
     },
     options: {
-      title:{ display: true, fontSize :20, text: "Grafico"},
+      title:{ display: true, fontSize :20, text: ""},
       labels:{
       fontStayle: "bold"},
         scales: {
@@ -627,19 +647,16 @@ var myChart = new Chart(ctx, {
   
 });
 </script>
+</div>
         </div> <!-- FIM display none descritiva-->
-      </div>
-    </div>
-  </div>
-  </div>
-  </div>
-
+      
 
 
   </div>
   </form>
   </div>
-
+</div>
+</div>
 
 
   <!-- DISTANCIA DA PAGINA  RODA PÉ -->
@@ -699,6 +716,7 @@ var myChart = new Chart(ctx, {
     </footer>
     <!-- FIM RODA PÉ -->
   </div>
+</div>
   </div>
   </div>
   <div id="probabilidade" style="display: none;">
@@ -730,7 +748,7 @@ var myChart = new Chart(ctx, {
                           <option value="DU">Distribuição Uniforme</option>
                           <option value="DB">Distribuição Binomial</option>
                         </select>
-                        <a class="new" href="" rel="nofollow"
+                        <a class="new"  rel="nofollow"
                           title="Distribuição:
 
                               Distribuição Normal apresenta-se em formato de sino, unimodal, simétrica em relação a sua média. Considerando a probabilidade de ocorrência, a área sob sua curva soma 100%.
@@ -742,24 +760,24 @@ var myChart = new Chart(ctx, {
                       <div id="dBinomial" style="display: none;">
                         <div>
                           <label>Tamanho da amostra (N):</label>
-                          <input type="text" style="border-radius: 10px;" name="txtN" id="txtN"><a class="new" href=""
+                          <input type="text" style="border-radius: 10px;" name="txtN" id="txtN"><a class="new" 
                             rel="nofollow" title=" N representa o total de tentativas"><code> ?</code></a>
                         </div>
                         <div>
                           <label for="txtK">Evento (K):</label>
                           <input type="text" style="border-radius: 10px;"
                             placeholder="Use ponto e vírgula para separar os dados." name="txtK" id="txtK"><a
-                            class="new" href="" rel="nofollow"
+                            class="new"  rel="nofollow"
                             title=" K representa o número de tentativas que resultam em sucesso"><code> ?</code></a>
                         </div>
                         <div>
                           <label for="txtP">Sucesso (P):</label>
-                          <input type="text" style="border-radius: 10px;" name="txtP" id="txtP"><a class="new" href=""
+                          <input type="text" style="border-radius: 10px;" name="txtP" id="txtP"><a class="new" 
                             rel="nofollow" title=" P é a probabilidade de obtermos um sucesso"><code> ?</code></a>
                         </div>
                         <div>
                           <label for="txtQ">Fracasso (Q):</label>
-                          <input type="text" style="border-radius: 10px;" name="txtQ" id="txtQ"><a class="new" href=""
+                          <input type="text" style="border-radius: 10px;" name="txtQ" id="txtQ"><a class="new" 
                             rel="nofollow"
                             title=" Q representa a probabilidade de obtermos um fracasso."><code> ?</code></a>
                         </div>
@@ -769,20 +787,20 @@ var myChart = new Chart(ctx, {
                         <div>
                           <label for="txtNTrans">Dados</label>
                           <input type="text" style="border-radius: 10px;" name="txtNTrans" id="txtNTrans"
-                            placeholder="Use ponto e vírgula para separar os dados."><a class="new" href=""
+                            placeholder="Use ponto e vírgula para separar os dados."><a class="new" 
                             rel="nofollow"
                             title=" Exemplo: a altura de uma determinada população em geral,peso,quantidade de vendas etc."><code> ?</code></a>
                         </div>
                         <div>
                           <label for="txtMediaDN">Média</label>
                           <input type="text" style="border-radius: 10px;" name="txtMediaDN" id="txtMediaDN"> <a
-                            class="new" href="" rel="nofollow"
+                            class="new"  rel="nofollow"
                             title=" Quando o número elementos de um conjunto é par, a mediana é encontrada pela média dos dois valores centrais. Assim, esses valores são somados e divididos por dois."><code> ?</code></a>
                         </div>
                         <div>
                           <label for="txtDesvioDN">Desvio Padrão</label>
                           <input type="text" style="border-radius: 10px;" name="txtDesvioDN" id="txtDesvioDN"><a
-                            class="new" href="" rel="nofollow"
+                            class="new"  rel="nofollow"
                             title=" O desvio padrão (DP) é definido como a raiz quadrada da variância (V)."><code> ?</code></a>
                         </div>
                         <div>
@@ -792,7 +810,7 @@ var myChart = new Chart(ctx, {
                             <option value="maiorQ">Maior Que</option>
                             <option value="menorQ">Menor Que</option>
                           </select>
-                          <a class="new" href="" rel="nofollow" title="Exemplo:
+                          <a class="new"  rel="nofollow" title="Exemplo:
                                  Numa escala contínua onde um ponto qualquer é infinitesimalmente
                                 pequeno, incluí-lo ou não no cálculo é irrelevante, pelo que ‘menor ou igual’ é o
                                 mesmo que ‘menor’ e ‘maior ou igual’ é o mesmo que ‘maior’ diante da variavel Dados. 
@@ -804,7 +822,7 @@ var myChart = new Chart(ctx, {
                         <div>
                           <label for="txtNIntervalo">Números do Intervalo </label>
                           <input type="text" style="border-radius: 10px;" name="txtNIntervalo" id="txtNIntervalo"
-                            placeholder="Use ponto e vírgula para separar os dados."><a class="new" href=""
+                            placeholder="Use ponto e vírgula para separar os dados."><a class="new" 
                             rel="nofollow" title=" Numero de intervalos:
                                  Gerar  qualquer ponto em um intervalo.
                                 Contido no espaço amostral é proporcional ao tamanho do intervalo.
@@ -813,13 +831,13 @@ var myChart = new Chart(ctx, {
                         <div>
                           <label for="txtPMin">Ponto Mínimo</label>
                           <input type="text" style="border-radius: 10px;" name="txtPMin" id="txtPMin"><a class="new"
-                            href="" rel="nofollow"
+                             rel="nofollow"
                             title=" É a Probabilidade de se obter um erro ou falha apartir de um ponto minimo de vezes ocorrido"><code> ?</code></a>
                         </div>
                         <div>
                           <label for="txtPMax">Ponto Máximo</label>
                           <input type="text" style="border-radius: 10px;" name="txtPMax" id="txtPMax"><a class="new"
-                            href="" rel="nofollow"
+                            rel="nofollow"
                             title=" É a Probabilidade de se obter um erro ou falha apartir de um ponto Maximo de vezes ocorrido."><code> ?</code></a>
                         </div>
                         <div>
@@ -830,7 +848,7 @@ var myChart = new Chart(ctx, {
                             <option value="menorQ">Menor Que</option>
                             <option value="deAte">De Até</option>
                           </select>
-                          <a class="new" href="" rel="nofollow" title="Exemplo:
+                          <a class="new"  rel="nofollow" title="Exemplo:
                                  Numa escala contínua onde um ponto qualquer é infinitesimalmente
                                 pequeno, incluí-lo ou não no cálculo é irrelevante, pelo que ‘menor ou igual’ é o
                                 mesmo que ‘menor’ e ‘maior ou igual’ é o mesmo que ‘maior’ diante da variavel Numero do intervalo. 
@@ -977,85 +995,80 @@ var myChart = new Chart(ctx, {
                 style="max-width:200rem;border-color:rgba(11, 197, 243, 0.671);background:rgba(31, 30, 28, 0.877);">
 
                 <div class="centralizartexto">
-                  <div class="textobranco">
-                    <div class="conteiner-fluid">
-                      <!-- inicio texto branco -->
-
-
-                      <h2>Correlação e Regressão </h2>
-
-                      <div class="distancia3">
-                        <p></p>
-                      </div>
-                      <div class="container" id="correla">
-                        <div class="row">
-                          <div class="input-field col-6" style="border-radius: 10px;">
-                            <label for="dependente">Variavel independente</label>
-                            <input id="dependente" name="dependente" placeholder="Valores de X separados por ;"
-                              type="text" class="validate" style="border-radius: 10px;">
-
-                          </div>
-                          <div class="input-field col-6" style="border-radius: 10px;">
-                            <label for="independente">Variavel dependente</label>
-                            <input id="independente" name="independente" placeholder="Valores de Y separados por ;"
-                              type="text" class="validate" style="border-radius: 10px;">
-                                                                                       
-                            <label class="btn btn-primary btn-dark" for="fileCorr">
-                                <input type="file" class="form-control-file border" onchange="lerArqCorr()" id="fileCorr" accept=".csv , .txt" style= "display: none;">
-                                Escolha um arquivo
-                            </label>
-                            
-                            <label id="labelArqC"></label>
-                          </div>
-                                                                                       
-                            
-                          <div class="input-field col s12">
-                            <button onclick="correlacao()" href="#saidacorrela"
-                              class="btn btn-outline-info">Calcular</button>
-                          </div>
-
-
+                    <div class="textobranco">
+                      <div class="conteiner-fluid">
+                        <!-- inicio texto branco -->
+  
+  
+                        <h2>Correlação e Regressão </h2>
+  
+                        <div class="distancia3">
+                          <p></p>
                         </div>
-                      </div>
-                      <div class="card-body text-secondary" style="padding:50px">
-                        <div class="container section scrollspy" id="saidacorrela">
-                          <div id="saidacorrelacao" class="card"
-                            style="max-width: auto;border-color:rgba(11, 197, 243, 0.671);background:rgba(31, 30, 28, 0.877); display: none; ">
-
-                            <canvas id="myChart2"></canvas>
-                            <p class="center" id="corelasaida"></p>
-                            <p class="center" id="equacaosaida"></p>
+                        <div class="container" id="correla">
+                          <div class="row">
+                            <div class="input-field col-6" style="border-radius: 10px;">
+                              <label for="dependente">Variavel independente</label>
+                              <input id="dependente" name="dependente" placeholder="Valores de X separados por ;" type="text" class="validate" style="border-radius: 10px;">
+  
+                            </div>
+                            <div class="input-field col-6" style="border-radius: 10px;">
+                              <label for="independente">Variavel dependente</label>
+                              <input id="independente" name="independente" placeholder="Valores de Y separados por ;" type="text" class="validate" style="border-radius: 10px;">
+                                                                                         
+                              <label class="btn btn-primary btn-dark" for="fileCorr">
+                                  <input type="file" class="form-control-file border" onchange="lerArqCorr()" id="fileCorr" accept=".csv , .txt" style="display: none;">
+                                  Escolha um arquivo
+                              </label>
+                              
+                              <label id="labelArqC"></label>
+                            </div>
+                                                                                         
+                              
+                            <div class="input-field col s12">
+                              <button onclick="correlacao()" href="#saidacorrela" class="btn btn-outline-info">Calcular</button>
+                            </div>
+  
+  
                           </div>
                         </div>
+                        <div class="card-body text-secondary" style="padding:50px">
+                          <div class="container section scrollspy" id="saidacorrela">
+                            <div id="saidacorrelacao" class="card" style="max-width: auto;border-color:rgba(11, 197, 243, 0.671);background:rgba(31, 30, 28, 0.877); display: none; ">
+  
+                              <canvas id="myChart2"></canvas>
+                              <p class="center" id="corelasaida"></p>
+                              <p class="center" id="equacaosaida"></p>
+                            </div>
+                          </div>
+                        </div>
+  
                       </div>
-
+                    </div>
+                    <div class="card " style="max-width: auto;border-color:rgba(11, 197, 243, 0.671);background:rgba(83, 88, 110, 0.11);">
+                      <!-- card resposta  -->
+                      <div class="centralizartexto">
+                        <div class="card-header" ;="" style="max-width: auto;border-color:rgba(11, 197, 243, 0.671);background:url('https://media.giphy.com/media/nsHjVgedX9KoM/giphy.gif')   center center no-repeat ;  -webkit-background-size: cover;
+                      -moz-background-size: cover;
+                      -o-background-size: cover;
+                      background-size: cover; "> RESULTADO CORELAÇÃO</div>
+                        <div class="card-body text-secondary">
+                          <p>
+                            </p><div class="centralizartexto">
+                              <div class="textobranco">
+                          <p></p>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                  <div class="card "
-                    style="max-width: auto;border-color:rgba(11, 197, 243, 0.671);background:rgba(83, 88, 110, 0.11);">
-                    <!-- card resposta  -->
-                    <div class="centralizartexto">
-                      <div class="card-header" ; style="max-width: auto;border-color:rgba(11, 197, 243, 0.671);background:url('https://media.giphy.com/media/nsHjVgedX9KoM/giphy.gif')   center center no-repeat ;  -webkit-background-size: cover;
-                    -moz-background-size: cover;
-                    -o-background-size: cover;
-                    background-size: cover; "> RESULTADO CORELAÇÃO</div>
-                      <div class="card-body text-secondary">
-                        <p>
-                          <div class="centralizartexto">
-                            <div class="textobranco">
-                        </p>
-                      </div>
-                    </div>
+                  <div class="distancia3">
+                    <p></p>
                   </div>
                 </div>
                 <div class="distancia3">
                   <p></p>
                 </div>
               </div>
-              <div class="distancia3">
-                <p></p>
-              </div>
-            </div>
           </div>
         </div>
     </div>
