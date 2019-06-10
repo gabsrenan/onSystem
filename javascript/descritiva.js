@@ -1,18 +1,18 @@
 function entrada() {
-    var valido = true
-    formulario = document.getElementById("formDescritiva");
+  var valido = true;
+  formulario = document.getElementById("formDescritiva");
 
-     if (formulario.nomevar.value == "") {
-          valido = false;
-      }
+    if (formulario.nomevar.value == "") {
+        valido = false;
+    }
     else if (formulario.dados.value == "") {
-      valido = false;
-  }
-      if (valido == false) {
-          alert("Preencha todos os campos!!");
-          return 0;
-      }
-  
+        valido = false;
+    }
+    if (valido == false) {
+        alert("Preencha os campos obrigatórios");
+        return 0;
+    }
+   
   var vetor = [];
   var dados = document.getElementById("dados").value;
   var nomevar = document.getElementById("nomevar").value;
