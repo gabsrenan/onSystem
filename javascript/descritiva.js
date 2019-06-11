@@ -20,7 +20,6 @@ function entrada() {
   var quintil = document.getElementById("quintil").value;
   var decil = document.getElementById("decil").value;
   var porcentil = document.getElementById("porcentil").value;
-  document.getElementById("grafico").style.display = "block";
   document.getElementById("cardresposta").style.display = "block";
   //document.getElementById("saidaDescritiva").style = "display: block" //isso aqui ta bugando o calcular
 
