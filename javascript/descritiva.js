@@ -1,4 +1,4 @@
-function entrada() {
+function entrada() { 
   var valido = true;
   formulario = document.getElementById("formDescritiva");
 
