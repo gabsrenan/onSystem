@@ -1,5 +1,0 @@
-deploy:
-type: git
-repo: <repository url>
-branch: [branch]
-message: [message]
