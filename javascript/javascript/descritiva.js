@@ -1,4 +1,18 @@
 function entrada() {
+  var valido = true;
+  formulario = document.getElementById("formDescritiva");
+
+  if (formulario.nomevar.value == "") {
+    valido = false;
+  }
+  else if (formulario.dados.value == "") {
+    valido = false;
+  }
+  if (valido == false) {
+    alert("Preencha os campos obrigatórios");
+    return 0;
+  }
+
   var vetor = [];
   var dados = document.getElementById("dados").value;
   var nomevar = document.getElementById("nomevar").value;
@@ -6,7 +20,9 @@ function entrada() {
   var quintil = document.getElementById("quintil").value;
   var decil = document.getElementById("decil").value;
   var porcentil = document.getElementById("porcentil").value;
-  document.getElementById("saidaDescritiva").style = "display: block"
+  document.getElementById("grafico").style.display = "block";
+  document.getElementById("cardresposta").style.display = "block";
+  //document.getElementById("saidaDescritiva").style = "display: block" //isso aqui ta bugando o calcular
 
   if (quartil != "") {
     var valorsep = quartil;
@@ -489,8 +505,8 @@ function quantitativa(vetor, nomevar, amostra, separatriz, valorsep) {
       menorv = menorv + intervalo;
     }
     mediana = liminf + ((posicao - facant) / linhas) * intervalo;
-    var res = liminf+((valorsep-facant)/linhas)*intervalo;
-    
+    var res = liminf + ((valorsep - facant) / linhas) * intervalo;
+
 
     var dp = 0;
     for (let i = 0; i < quant.length; i++) {
@@ -621,26 +637,226 @@ function quantitativa(vetor, nomevar, amostra, separatriz, valorsep) {
         "</tr>";
     }
 
-
     exibe = exibe + "</tbody> </tabela>";
-    document.getElementById("saida").innerHTML =
+    document.getElementById("saida1").innerHTML =
       "Media: " +
-      media.toFixed(2) +
+      media.toFixed(2)
+    document.getElementById("saida2").innerHTML =
       "<br>" +
       "Moda : " +
-      moda +
+      moda
+    document.getElementById("saida3").innerHTML =
       "<br>" +
       "Mediana: " +
-      mediana +
+      mediana
+    document.getElementById("saida4").innerHTML =
       "<br>" +
       " Desvio Padrão : " +
-      dp.toFixed(2) +
+      dp.toFixed(2)
+    document.getElementById("saida5").innerHTML =
       "<br>" +
       "Coeficiente de variação: " +
       CV.toFixed(2) +
       "%";
     document.getElementById("exibe").innerHTML = exibe;
     moda = "";
+  }
+  var chart=[]; var data=[]
+  var label;
+  var optionsc = {
+    scales: {
+      xAxes: [{
+        categoryPercentage: 1,
+        barPercentage: 1
+      }],
+      yAxes: [{
+        ticks: {
+          beginAtZero: true
+        }
+      }]
+    },
+
+    title: {
+      display: true,
+      text: "pesquisa:" + nomevar,
+      fontSize: 15,
+      borderWidth: 100
+
+    },
+    legend: {
+      display: true,
+      position: 'bottom',
+      labels: {
+        fontColor: '#000'
+      }
+    },
+
+    layout: {
+      padding: {
+        left: 0,
+        right: 150,
+        bottom: 0,
+        top: 0
+      }
+    },
+    tooltips: {
+      enabled: true
+    }
+  }
+
+  var optionsp = {
+    scales: {
+      yAxes: [{
+        ticks: {
+          beginAtZero: true
+        }
+      }]
+    },
+
+    title: {
+      display: true,
+      text: "pesquisa:" + nomevar,
+      fontSize: 15,
+      borderWidth: 100
+
+    },
+    legend: {
+      display: true,
+      position: 'bottom',
+      labels: {
+        fontColor: '#000'
+      }
+    },
+
+    layout: {
+      padding: {
+        left: 0,
+        right: 150,
+        bottom: 0,
+        top: 0
+      }
+    },
+    tooltips: {
+      enabled: true
+    }
+  };
+
+
+
+  if (amplitude[0] != null && isNaN(vetor[0]) != true) {
+    for (let i = 0; i < amplitude.length; i++) {
+      chart[i] = String(amplitude[i]);
+    };
+    for (let i = 0; i < quant.length; i++) {
+      data[i] = quant[i];
+
+    };
+    label = optionsc;
+    grafico1(chart, data, label);
+  }
+
+  else if (amplitude[0] == null && isNaN(vetor[0]) != true) {
+    for (let i = 0; i < elemento.length; i++) {
+      chart[i] = String(elemento[i]);
+    };
+    for (let i = 0; i < quantidade.length; i++) {
+      data[i] = quantidade[i];
+
+    };
+    label = optionsp;
+    grafico1(chart, data, label);
+  }
+
+
+  var graficoVar;
+  function grafico1(chart, data, label) {
+
+
+    var ctx = document.getElementById("myChart").getContext('2d');
+    if (graficoVar != null) {
+      graficoVar.destroy();
+    }
+
+    graficoVar = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: chart,
+        datasets: [
+          {
+            label: nomevar,
+            data: data,
+            backgroundColor: [
+              'rgba(72, 61, 139, 0.6)',
+
+              'rgba(0, 0, 255, 0.6)',
+
+              'rgba(34, 139, 34, 0.6)',
+
+              'rgba(255, 255, 0, 0.6)',
+
+              'rgba(255, 0, 0, 0.6)',
+
+              'rgba(0, 255, 127, 0.6)',
+
+              'rgba(255, 140, 0, 0.6)',
+
+              'rgba(54, 162, 235, 0.6)',
+
+              'rgba(255, 206, 86, 0.6)',
+
+              'rgba(75, 192, 192, 0.6)',
+
+              'rgba(255, 99, 132, 0.6)',
+
+              'rgba(25, 25, 112, 0.6)',
+
+              'rgba(100, 149, 237, 0.6)',
+
+              'rgba(0, 250, 154, 0.6)',
+
+              'rgba(165, 42, 42, 0.6)',
+
+              'rgba(148, 0, 211, 0.6)',
+
+              'rgba(153, 102, 255, 0.6)',
+
+              'rgba(255, 159, 64, 0.6)',
+
+              'rgba(205, 69, 102, 0.6)',
+
+              'rgba(47, 79, 79, 0.6)',
+
+              'rgba(119, 136, 153, 0.6)'
+            ],
+            borderWidth: 1,
+            borderColor: '#777',
+            hoverBorderWidth: 3,
+            hoverBorderColor: '#000'
+          }],
+      },
+      options: label
+    });
+  }
+
+  console.log({ graficoVar });
+  function attgrafico() {
+    removeData(Chart);
+    function removeData(chart) {
+      chart.data.labels.pop();
+      chart.data.datasets.forEach((dataset) => {
+        dataset.data.pop();
+      });
+      chart.update();
+    };
+    addData(chart, label, data);
+    function addData(chart, label, data) {
+      chart.data.labels.push(label);
+      chart.data.datasets.forEach((dataset) => {
+        dataset.data.push(data);
+      });
+      chart.update();
+    };
+
   }
 }
 function separatrizes(vetor, valorsep, separatriz) {
@@ -649,6 +865,6 @@ function separatrizes(vetor, valorsep, separatriz) {
     posi = (tamvet * valorsep) / 100;
     var res = vetor[Math.round(posi)];
     document.getElementById("saidaseparatriz").innerHTML =
-      "O valor da Medida Separatriz escolhido é de: " + res;
+      "Medida Separatriz escolhida: " + res;
   }
 }
