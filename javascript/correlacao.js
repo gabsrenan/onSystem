@@ -16,7 +16,7 @@ function correlacao() {
     var Xdep = (document.getElementById("dependente").value);
     var Yindep = (document.getElementById("independente").value);
 document.getElementById("saidacorrelacao").style = "display: block"
-document.getElementById("resultadocorrelacao").style.display = "block";
+
 
     Xdepend = Xdep.split(";");
     Yindepend = Yindep.split(";");

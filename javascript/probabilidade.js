@@ -185,6 +185,7 @@ function validacaoDist(){
         document.getElementById("probResp").innerHTML = respostaDist+"%";
     }
     document.getElementById("saidaDist").style = "display : block;"
+    document.getElementById("saidaDiscrit").style = "display : block;"
 
 }
 
