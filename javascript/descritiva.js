@@ -22,7 +22,7 @@ function entrada() {
   var porcentil = document.getElementById("porcentil").value;
   document.getElementById("grafico").style.display = "block";
   document.getElementById("cardresposta").style.display = "block";
-  //document.getElementById("saidaDescritiva").style = "display: block" isso aqui ta bugando o calcular//
+  //document.getElementById("saidaDescritiva").style = "display: block" //isso aqui ta bugando o calcular
 
   if (quartil != "") {
     var valorsep = quartil;
