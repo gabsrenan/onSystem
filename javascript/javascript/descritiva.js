@@ -868,3 +868,4 @@ function separatrizes(vetor, valorsep, separatriz) {
       "Medida Separatriz escolhida: " + res;
   }
 }
+ 
