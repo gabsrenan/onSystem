@@ -1,0 +1,153 @@
+<html>
+<link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Estilos customizados para esse template -->
+<link href="../styles/logincss.css" rel="stylesheet">
+<link rel='stylesheet' type='text/css' media='screen'
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"><!--BOOTSTRAP-->
+
+
+
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<!--land pag -->
+
+
+
+
+
+<!-- teste alert
+
+  
+
+<div class="land">
+  <div class="alert alert-danger alert-dismissible">
+    <a href="index.html" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <h4 class="alert-heading">BEM VINDO!</h4>
+    
+    <p class="mb-0">Se você acha caro e dificil, Economize Dinheiro! 
+        <p>DEIXE QUE A GENTE RESOLVA PRA VOCÊ<hr>
+      
+      E só dar o  play .</p>
+    <a href="index.html" class="btn btn-outline-warning" role="button" aria-pressed="true">PLAY</a>
+  </div>
+</div>
+</div> teste alert -->
+
+<style>
+    #cardca{
+  
+      
+      left: -200px; /* posiciona a 90px para a esquerda */ 
+      top: 30px; /* posiciona a 70px para baixo */
+      } 
+</style>
+
+<!--login -->
+<body class="text-center">
+<form class="form-signin">
+  <div class="textobranco">
+  <img class="mb-4" src="../jpg/letraaa.png" alt="" width="300" height="200">
+  <h1 class="h3 mb-3 font-weight-normal">Faça login</h1>
+  <label for="inputEmail" class="sr-only">Endereço de email</label>
+  <input type="email" id="inputEmail" class="form-control" placeholder="Seu email" required autofocus>
+  <label for="inputPassword" class="sr-only">Senha</label>
+   <input type="password" id="inputPassword" class="form-control" placeholder="Senha" required>
+  <!-- <div class="checkbox mb-3"-->
+    <label>
+      <input type="checkbox" value="remember-me"> Lembrar de mim
+    </label>
+  </div>
+  
+  <!--   <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>     teste -->
+  <a href="../page/home.html" class="btn btn-outline-info" role="button" aria-pressed="true">Logar</a>
+  
+  <button onclick="clickCadastro()" type="button" class="btn btn-outline-info">Cadastre-se</button>
+  <a href="../page/home.html" class="btn btn-outline-info" role="button" aria-pressed="true">Entre como visitante</a>
+  
+  
+  <p class="mt-5 mb-3 text-muted">&copy; 2019</p>
+</div>
+</form>
+
+<script>
+function clickCadastro() {
+  
+  document.getElementById("cadastro").style.display = "block";
+}
+</script>
+
+
+
+<div id="cadastro" style="display: none;">
+    <!-- none -->
+    <div class="centralizartexto">
+      <div class="card "  id="cardca" style="max-width:auto; border-color:rgba(11, 197, 243, 0.671);background:rgba(7, 7, 6, 0.432);">
+
+        <div class="textobranco">
+          <div class="card-header">
+            <h5>CADASTRO</h5>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Crie uma conta para ser nosso membro!</h5>
+
+            <div class="textobranco">
+
+
+              <form>
+                <div class="textobranco ">
+                  <div class="form-row ">
+                    <div class="form-group col-md-6 ">
+                      <div class="textobranco">
+                        <label for="inputEmail4">Nome</label>
+                      </div>
+                      <input type="text" class="form-control" id="inputEmail4" placeholder="Nome">
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label for="inputPassword4">Sobrenome</label>
+                      <input type="text" class="form-control" id="inputPassword4" placeholder="Sobrenome">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputAddress">Email</label>
+                    <input type="email" class="form-control" id="inputAddress" placeholder="Email">
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label for="inputAddress2">Senha</label>
+                      <input type="password" class="form-control" id="inputAddress2" placeholder="Senha">
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label for="inputAddress2">Confirmar senha</label>
+                      <input type="password" class="form-control" id="inputAddress2" placeholder="Senha">
+                    </div>
+                  </div>
+
+
+                </div>
+                <a href="../page/home.html" class="btn btn-outline-info" role="button" aria-pressed="true">Cadastrar</a>
+            </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  </div>
+
+
+
+  
+</body>
+
+</html>
+
+
