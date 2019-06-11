@@ -866,5 +866,5 @@ function separatrizes(vetor, valorsep, separatriz) {
     var res = vetor[Math.round(posi)];
     document.getElementById("saidaseparatriz").innerHTML =
       "Medida Separatriz escolhida: " + res;
-  }
+  } 
 }
