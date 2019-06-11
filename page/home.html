@@ -1,6 +1,7 @@
 <html>
 
 <head>
+  
   <!-- INICIO DO HEAD -->
   <meta charset="utf-8">
 
@@ -746,6 +747,7 @@ background-size: cover; ">
                     <form id="formularioDist">
                       <label id="labelTipoDist"></label>
                       <div id="dSelDist">
+                        <div class="distancia8"><p></p></div>
                         <h3>Tipo de Distribuição</h3>
                         <br />
                         <select id="selTipoDist" onchange="verificarValorDist()" class="custom-select col-6"
@@ -986,20 +988,25 @@ background-size: cover; ">
   </div>
 
 
-  </div> <!--  FIM Display none probabilidade -->
-  </div>
-  <div class="conteiner">
-    <div id="correlacao" style="display: none;">
-      <!-- INICIO Display none probabilidade -->
-      <form id="formCorrelacao">
+
+  <div id="correlacao" style="display: none;">
+  <p></p>
+  <label></label>
+ 
+     
         <div class="textobranco">
-          <div class="conteiner">
+          <div class="conteiner-fluid">
+</div>
 
-
-            <div class="centralizartexto">
-              <div class="card "
-                style="max-width:200rem;border-color:rgba(11, 197, 243, 0.671);background:rgba(31, 30, 28, 0.877);">
-
+            
+  <div class="centralizartexto">
+      <div class="centraliza">
+      <div class="card "
+        style="max-width:auto;border-color:rgba(11, 197, 243, 0.671);background:rgba(31, 30, 28, 0.877);">
+        <div class="textobranco">
+          <!-- inicio texto branco -->
+          <div class="card-header">
+<p id="formCorrelacao">
                 <div class="centralizartexto">
                   <div class="textobranco">
                     <div class="conteiner-fluid">
@@ -1008,7 +1015,7 @@ background-size: cover; ">
 
                       <h2>Correlação e Regressão </h2>
 
-                      <div class="distancia3">
+                      <div class="distancia4">
                         <p></p>
                       </div>
                       <div class="container" id="correla">
@@ -1033,7 +1040,7 @@ background-size: cover; ">
                             <label id="labelArqC"></label>
                           </div>
 
-
+                          <div class="distancia4"></div>
                           <div class="input-field col s12">
                             <button onclick="correlacao()" href="#saidacorrela"
                               class="btn btn-outline-info">Calcular</button>
@@ -1056,10 +1063,10 @@ background-size: cover; ">
 
                     </div>
                   </div>
-                  <div class="card "
-                    style="max-width: auto;border-color:rgba(11, 197, 243, 0.671);background:rgba(83, 88, 110, 0.11);">
+         
                     <!-- card resposta  -->
                     <div class="centralizartexto">
+                        <div id="resultadocorrelacao" style="display: none;">
                       <div class="card-header" ;="" style="max-width: auto;border-color:rgba(11, 197, 243, 0.671);background:url('https://media.giphy.com/media/nsHjVgedX9KoM/giphy.gif')   center center no-repeat ;  -webkit-background-size: cover;
                       -moz-background-size: cover;
                       -o-background-size: cover;
@@ -1085,8 +1092,19 @@ background-size: cover; ">
               </div>
             </div>
           </div>
-      </form>
+        </p>
+        
+  
+      </div>
     </div>
+  
+     
+    </div>
+  </div>
+</div>
+
+
+
 
 
 
@@ -1153,6 +1171,28 @@ background-size: cover; ">
           </div>
       </footer>
       <!-- FIM RODA PÉ -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div> <!--  FIM Display none probabilidade -->
+  </div>
+  <div class="conteiner">
+   
       <!-- LINK JS  -->
       <link rel="stylesheet" type="text/css" media="screen"
         href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -1175,6 +1215,20 @@ background-size: cover; ">
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
+
+
+      <style>
+        #card{
+          align-items: center;
+          align-items: center;
+      justify-content: center }
+     
+    </style>
+        
+
+
+
+        
 </body>
 <!-- FIM BODY -->
 
