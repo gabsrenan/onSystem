@@ -96,3 +96,21 @@ document.getElementById("saidacorrelacao").style = "display: block";
       });
   
 }
+function projetarComX(){
+	A = a
+	B = b 
+  var x = document.getElementById("PROJETARX").value
+  document.getElementById('equacaosaida').innerHTML = "Y = " + A + " * X " + " + " + B;
+  
+	var saida = ((Number(a)*Number(x) )+Number(b)).toFixed(2)
+	document.getElementById("SAIDA0").innerHTML = ("Y = " + saida)
+}
+
+function projetarComY(){
+	A = a
+	B = b 
+	var y = document.getElementById("PROJETARY").value
+	var saida = ((Number(y) - Number(b) ) / Number(a)).toFixed(2)
+	document.getElementById("SAIDA00").innerHTML = ("X = " + saida)
+
+}

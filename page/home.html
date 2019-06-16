@@ -499,8 +499,7 @@
                             title="Quantidade de Frequencias que a variavel se repete."><code> ?</code></a>
                         </div>
         </form>
-        <div class="textobranco">
-
+        
 
         </div>
         <div class="distancia2">
@@ -634,51 +633,9 @@
           style="max-width: auto;border-color:rgba(11, 197, 243, 0.671);background:rgba(31, 30, 28, 0.877);max-width: 1auto;">
           <canvas id="myChart3" width="400" height="400"></canvas>
         </div>
-        <script>
-          var ctx = document.getElementById('myChart3');
-          var myChart3 = new Chart(ctx, {
-            type: 'bar',
-            data: {
-              labels: ['resultado', 'exibi', 'Yellow', 'Green', 'Purple', 'Orange'],
-              datasets: [{
-                label: 'Frequencia',
-                data: [12, 19, 3, 5, 2, 3],
-
-                backgroundColor: [
-                  'rgba(255, 99, 132, 0.2)',
-                  'rgba(54, 162, 235, 0.2)',
-                  'rgba(255, 206, 86, 0.2)',
-                  'rgba(75, 192, 192, 0.2)',
-                  'rgba(153, 102, 255, 0.2)',
-                  'rgba(255, 159, 64, 0.2)'
-                ],
-                borderColor: [
-                  'rgba(255, 99, 132, 1)',
-                  'rgba(54, 162, 235, 1)',
-                  'rgba(255, 206, 86, 1)',
-                  'rgba(75, 192, 192, 1)',
-                  'rgba(153, 102, 255, 1)',
-                  'rgba(255, 159, 64, 1)'
-                ],
-                borderWidth: 1
-              }]
-            },
-            options: {
-              title: { display: true, fontSize: 20, text: "" },
-              labels: {
-                fontStayle: "bold"
-              },
-              scales: {
-                yAxes: [{
-                  ticks: {
-                    beginAtZero: true
-                  }
-                }]
-              }
-            }
-
-          });
-        </script>
+   
+        <canvas id="myChart" width="400" height="400"></canvas>
+        <canvas id="canvasDiscreta"></canvas>
       </div>
     </div> <!-- FIM display none DO GRAFICO-->
     <!-- FIM display none DO GRAFICO-->
@@ -1121,9 +1078,43 @@
                             <div id="saidacorrelacao" class="card" style="max-width: auto;border-color:rgba(11, 197, 243, 0.671);background:rgba(31, 30, 28, 0.877); display: none; ">
             
                               <canvas id="myChart2"></canvas>
+                            
+                              <p></p>
+                              <div class="card "
+            style="max-width:auto;border-color:rgba(11, 197, 243, 0.671);background:rgba(31, 30, 28, 0.877);">
+            <div class="textobranco">
+                              <div class="card-header" ; style="max-width: auto;border-color:rgba(11, 197, 243, 0.671);background:url('https://media.giphy.com/media/nsHjVgedX9KoM/giphy.gif')   center center no-repeat ;  -webkit-background-size: cover;
+                              -moz-background-size: cover;
+                              -o-background-size: cover;
+                              background-size: cover; "> RESULTADO CORRELAÇAO</div>
+              <div class="card "
+              style="max-width:auto;border-color:rgba(11, 197, 243, 0.671);background:rgba(31, 30, 28, 0.877);">
+              <div class="textobranco">
+                <p>
+                  <div class="textobranco">
                               <p class="center" id="corelasaida"></p>
                               <p class="center" id="equacaosaida"></p>
+                              </p>
+                            
+                          </div>
+                          </div>
                               
+                                
+                                  <div style="text-align: center;">
+                                      <p>
+                                        <input type="number" style="border-radius: 10px;" id="PROJETARX">
+                                        <button for="dependente" class="btn btn-outline-info" onclick="projetarComX()">projetar com X</button><br><br>
+                                        <p id="SAIDA0">
+                                            
+                                      </p>
+                                      <p>
+                                        <input type="number" id="PROJETARY" style="border-radius: 10px;">
+                                        <button  class="btn btn-outline-info" onclick="projetarComY()">projetar com Y</button>
+                                        <p id="SAIDA00">
+                                      </p>
+                               
+                          
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1262,7 +1253,7 @@
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="../javascript/descritiva.js"></script>
     <script src="../javascript/indexx.js"></script>
-
+    <script src="../javascript/grafico.js"></script>
     <script src="../javascript/probabilidade.js"></script>
     <script src="../javascript/correlacao.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
